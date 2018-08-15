@@ -1,0 +1,6 @@
+C:\Users\run1009\Documents\BLE_Central_Observer\BLE_Central_Observer.cydsn\BLE_Central_Observer.cyprj|51e779b6-ac79-4929-9247-376e75e7f084
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|e1fde325-913e-484a-aaa2-e73a45b1f791
+C:\Users\run1009\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|13eb90aa-0487-46d7-a3c3-45a710929fff
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|1a561e64-63c5-4623-b02e-7d4eadc7392d
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|37e595ad-0fa9-4c95-8063-74aa7e8d0baf
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|f4fc9d40-6941-4ba2-9c2f-b056e62b0d37
