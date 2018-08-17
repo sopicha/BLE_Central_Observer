@@ -163,14 +163,6 @@
 <v>BLE_Central_Observer\BLE_Central_Observer\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_BOOT.lst</v>
 <v>BLE_Central_Observer\BLE_Central_Observer\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_PM.lst</v>
 <v>BLE_Central_Observer\BLE_Central_Observer\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_rx.lst</v>
-<v>BLE_Central_Observer\BLE_Central_Observer\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_rx_PM.lst</v>
-<v>BLE_Central_Observer\BLE_Central_Observer\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SCBCLK.lst</v>
-<v>BLE_Central_Observer\BLE_Central_Observer\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SPI_UART.lst</v>
-<v>BLE_Central_Observer\BLE_Central_Observer\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_SPI_UART_INT.lst</v>
-<v>BLE_Central_Observer\BLE_Central_Observer\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_tx.lst</v>
-<v>BLE_Central_Observer\BLE_Central_Observer\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_tx_PM.lst</v>
-<v>BLE_Central_Observer\BLE_Central_Observer\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_UART.lst</v>
-<v>BLE_Central_Observer\BLE_Central_Observer\CortexM0\ARM_GCC_541\Debug\Listing Files\UART_UART_BOOT.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -212,7 +204,19 @@
 </userData>
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
-<OpenDocs />
+<OpenDocs>
+<name v=".\BLE_Central_Observer.cydsn\BLE_Central_Observer.c" />
+<name v=".\BLE_Central_Observer.cydsn\debug.c" />
+<name v=".\BLE_Central_Observer.cydsn\main.c" />
+<name v=".\BLE_Central_Observer.cydsn\TopDesign\TopDesign.cysch" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1369, 562" SelectedTabbedMdiWindow="bdbf9ee3-59c0-47e1-8960-f83a3e1d6d58"><DocumentWindow Key="C:\Users\run1009\Documents\BLE_Central_Observer\BLE_Central_Observer.cydsn\BLE_Central_Observer.c" Guid="bdbf9ee3-59c0-47e1-8960-f83a3e1d6d58" /><DocumentWindow Key="C:\Users\run1009\Documents\BLE_Central_Observer\BLE_Central_Observer.cydsn\debug.c" Guid="56a42645-8013-4670-b7b5-b5ff22e4ea97" /><DocumentWindow Key="C:\Users\run1009\Documents\BLE_Central_Observer\BLE_Central_Observer.cydsn\main.c" Guid="069aa2d5-a774-44a8-982a-26d38f5c2181" /><DocumentWindow Key="C:\Users\run1009\Documents\BLE_Central_Observer\BLE_Central_Observer.cydsn\TopDesign\TopDesign.cysch" Guid="37492b74-dcb7-47cd-b0a1-0ec6c8defc53" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

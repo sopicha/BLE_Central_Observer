@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 1
 
 
    1              		.syntax unified
@@ -37,12 +37,12 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
   34              		.type	bt_addr, %object
   35              		.size	bt_addr, 6
   36              	bt_addr:
-  37 0000 B3       		.byte	-77
-  38 0001 08       		.byte	8
-  39 0002 7F       		.byte	127
-  40 0003 83       		.byte	-125
-  41 0004 55       		.byte	85
-  42 0005 E2       		.byte	-30
+  37 0000 04       		.byte	4
+  38 0001 27       		.byte	39
+  39 0002 A8       		.byte	-88
+  40 0003 1B       		.byte	27
+  41 0004 00       		.byte	0
+  42 0005 C4       		.byte	-60
   43              		.section	.rodata
   44              		.align	2
   45              	.LC5:
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
   51              	.LC9:
   52 001c 52535349 		.ascii	"RSSI: %d \015\012\000"
   52      3A202564 
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 2
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 2
 
 
   52      200D0A00 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
   18:BLE_Central_Observer.c **** 
   19:BLE_Central_Observer.c **** uint8 devIndex;
   20:BLE_Central_Observer.c **** uint8 Periph_Selected;
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 3
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 3
 
 
   21:BLE_Central_Observer.c ****  
@@ -138,7 +138,7 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
   35:BLE_Central_Observer.c **** 
   36:BLE_Central_Observer.c **** 
   37:BLE_Central_Observer.c **** int check = 0;
-  38:BLE_Central_Observer.c **** uint8 bt_addr[6] = {0xb3,0x08,0x7f,0x83,0x55,0xe2};
+  38:BLE_Central_Observer.c **** uint8 bt_addr[6] = {0x04,0x27,0xa8,0x1b,0x00,0xc4};
   39:BLE_Central_Observer.c **** /*******************************************************************************
   40:BLE_Central_Observer.c **** * Function Name: Get_Adv_Scan_Packets
   41:BLE_Central_Observer.c **** ********************************************************************************
@@ -175,10 +175,10 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
   56:BLE_Central_Observer.c ****  uint8 RepIndex; //Index for Bytes in Scan Response Packet
   57:BLE_Central_Observer.c ****     if(devIndex <3)
   93              		.loc 1 57 0
-  94 0008 7C4B     		ldr	r3, .L14
+  94 0008 7C4B     		ldr	r3, .L13
   95 000a 1B78     		ldrb	r3, [r3]
   96 000c 022B     		cmp	r3, #2
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 4
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 4
 
 
   97 000e 00D9     		bls	.LCB19
@@ -222,8 +222,8 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  124              	.L3:
  125              	.LBB3:
   66:BLE_Central_Observer.c ****             {
-  67:BLE_Central_Observer.c ****  
-  68:BLE_Central_Observer.c ****         for(uint8 i=0;i<6;i++){
+  67:BLE_Central_Observer.c ****      
+  68:BLE_Central_Observer.c ****         for(uint8 i=0u;i<6u;i++){
  126              		.loc 1 68 0
  127 0032 0E23     		movs	r3, #14
  128 0034 FB18     		adds	r3, r7, r3
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  136 0040 1A78     		ldrb	r2, [r3]
  137 0042 7B68     		ldr	r3, [r7, #4]
  138 0044 5968     		ldr	r1, [r3, #4]
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 5
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 5
 
 
  139 0046 0E23     		movs	r3, #14
@@ -249,7 +249,7 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  144 0050 0823     		movs	r3, #8
  145 0052 FB18     		adds	r3, r7, r3
  146 0054 9954     		strb	r1, [r3, r2]
-  70:BLE_Central_Observer.c ****     
+  70:BLE_Central_Observer.c ****             
   71:BLE_Central_Observer.c ****             if(scan_addr[i] == bt_addr[i]){
  147              		.loc 1 71 0
  148 0056 0E23     		movs	r3, #14
@@ -261,16 +261,16 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  154 0062 0E23     		movs	r3, #14
  155 0064 FB18     		adds	r3, r7, r3
  156 0066 1B78     		ldrb	r3, [r3]
- 157 0068 6549     		ldr	r1, .L14+4
+ 157 0068 6549     		ldr	r1, .L13+4
  158 006a CB5C     		ldrb	r3, [r1, r3]
  159 006c 9A42     		cmp	r2, r3
  160 006e 04D1     		bne	.L6
   72:BLE_Central_Observer.c ****                 check++;   
  161              		.loc 1 72 0
- 162 0070 644B     		ldr	r3, .L14+8
+ 162 0070 644B     		ldr	r3, .L13+8
  163 0072 1B68     		ldr	r3, [r3]
  164 0074 5A1C     		adds	r2, r3, #1
- 165 0076 634B     		ldr	r3, .L14+8
+ 165 0076 634B     		ldr	r3, .L13+8
  166 0078 1A60     		str	r2, [r3]
  167              	.L6:
   68:BLE_Central_Observer.c ****             scan_addr[i] = scanReport->peerBdAddr[i];
@@ -294,83 +294,86 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  184              	.LBE3:
   73:BLE_Central_Observer.c ****             }
   74:BLE_Central_Observer.c ****         }
-  75:BLE_Central_Observer.c ****        }
-  76:BLE_Central_Observer.c ****         //if scanned ble address matched to target address
-  77:BLE_Central_Observer.c ****         if (check==6)
- 185              		.loc 1 77 0 is_stmt 1
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 6
+  75:BLE_Central_Observer.c ****       
+  76:BLE_Central_Observer.c ****        }
+  77:BLE_Central_Observer.c ****             
+  78:BLE_Central_Observer.c ****         //if scanned ble address matched to target address
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 6
 
 
- 186 0092 5C4B     		ldr	r3, .L14+8
+  79:BLE_Central_Observer.c ****         if (check==6)
+ 185              		.loc 1 79 0 is_stmt 1
+ 186 0092 5C4B     		ldr	r3, .L13+8
  187 0094 1B68     		ldr	r3, [r3]
  188 0096 062B     		cmp	r3, #6
  189 0098 00D0     		beq	.LCB99
  190 009a A7E0     		b	.L2	@long jump
  191              	.LCB99:
-  78:BLE_Central_Observer.c ****         {
-  79:BLE_Central_Observer.c ****              IsDetected = 1;
- 192              		.loc 1 79 0
- 193 009c 5A4B     		ldr	r3, .L14+12
+  80:BLE_Central_Observer.c ****         
+  81:BLE_Central_Observer.c ****         {
+  82:BLE_Central_Observer.c ****              IsDetected = 1;
+ 192              		.loc 1 82 0
+ 193 009c 5A4B     		ldr	r3, .L13+12
  194 009e 0122     		movs	r2, #1
  195 00a0 1A70     		strb	r2, [r3]
-  80:BLE_Central_Observer.c ****             // Receiving Advertisement Packet
-  81:BLE_Central_Observer.c ****             if ((scanReport->eventType == CYBLE_GAPC_CONN_UNDIRECTED_ADV)||
- 196              		.loc 1 81 0
+  83:BLE_Central_Observer.c ****             // Receiving Advertisement Packet
+  84:BLE_Central_Observer.c ****             if ((scanReport->eventType == CYBLE_GAPC_CONN_UNDIRECTED_ADV)||
+ 196              		.loc 1 84 0
  197 00a2 7B68     		ldr	r3, [r7, #4]
  198 00a4 1B78     		ldrb	r3, [r3]
  199 00a6 002B     		cmp	r3, #0
  200 00a8 0BD0     		beq	.L9
-  82:BLE_Central_Observer.c ****                 (scanReport->eventType == CYBLE_GAPC_CONN_DIRECTED_ADV)||
- 201              		.loc 1 82 0 discriminator 1
+  85:BLE_Central_Observer.c ****                 (scanReport->eventType == CYBLE_GAPC_CONN_DIRECTED_ADV)||
+ 201              		.loc 1 85 0 discriminator 1
  202 00aa 7B68     		ldr	r3, [r7, #4]
  203 00ac 1B78     		ldrb	r3, [r3]
-  81:BLE_Central_Observer.c ****                 (scanReport->eventType == CYBLE_GAPC_CONN_DIRECTED_ADV)||
- 204              		.loc 1 81 0 discriminator 1
+  84:BLE_Central_Observer.c ****                 (scanReport->eventType == CYBLE_GAPC_CONN_DIRECTED_ADV)||
+ 204              		.loc 1 84 0 discriminator 1
  205 00ae 012B     		cmp	r3, #1
  206 00b0 07D0     		beq	.L9
-  83:BLE_Central_Observer.c ****                 (scanReport->eventType == 	CYBLE_GAPC_SCAN_UNDIRECTED_ADV)||
- 207              		.loc 1 83 0
+  86:BLE_Central_Observer.c ****                 (scanReport->eventType == 	CYBLE_GAPC_SCAN_UNDIRECTED_ADV)||
+ 207              		.loc 1 86 0
  208 00b2 7B68     		ldr	r3, [r7, #4]
  209 00b4 1B78     		ldrb	r3, [r3]
-  82:BLE_Central_Observer.c ****                 (scanReport->eventType == CYBLE_GAPC_CONN_DIRECTED_ADV)||
- 210              		.loc 1 82 0
+  85:BLE_Central_Observer.c ****                 (scanReport->eventType == CYBLE_GAPC_CONN_DIRECTED_ADV)||
+ 210              		.loc 1 85 0
  211 00b6 022B     		cmp	r3, #2
  212 00b8 03D0     		beq	.L9
-  84:BLE_Central_Observer.c ****                 (scanReport->eventType == 	CYBLE_GAPC_NON_CONN_UNDIRECTED_ADV))
- 213              		.loc 1 84 0
+  87:BLE_Central_Observer.c ****                 (scanReport->eventType == 	CYBLE_GAPC_NON_CONN_UNDIRECTED_ADV))
+ 213              		.loc 1 87 0
  214 00ba 7B68     		ldr	r3, [r7, #4]
  215 00bc 1B78     		ldrb	r3, [r3]
-  83:BLE_Central_Observer.c ****                 (scanReport->eventType == 	CYBLE_GAPC_SCAN_UNDIRECTED_ADV)||
- 216              		.loc 1 83 0
+  86:BLE_Central_Observer.c ****                 (scanReport->eventType == 	CYBLE_GAPC_SCAN_UNDIRECTED_ADV)||
+ 216              		.loc 1 86 0
  217 00be 032B     		cmp	r3, #3
  218 00c0 61D1     		bne	.L10
  219              	.L9:
-  85:BLE_Central_Observer.c ****             {
-  86:BLE_Central_Observer.c ****                 memcpy(connectPeriphDevice[devIndex].bdAddr, scanReport->peerBdAddr,
- 220              		.loc 1 86 0
- 221 00c2 4E4B     		ldr	r3, .L14
+  88:BLE_Central_Observer.c ****             {
+  89:BLE_Central_Observer.c ****                 memcpy(connectPeriphDevice[devIndex].bdAddr, scanReport->peerBdAddr,
+ 220              		.loc 1 89 0
+ 221 00c2 4E4B     		ldr	r3, .L13
  222 00c4 1B78     		ldrb	r3, [r3]
  223 00c6 1A00     		movs	r2, r3
  224 00c8 1300     		movs	r3, r2
  225 00ca DB00     		lsls	r3, r3, #3
  226 00cc 9B1A     		subs	r3, r3, r2
- 227 00ce 4F4A     		ldr	r2, .L14+16
+ 227 00ce 4F4A     		ldr	r2, .L13+16
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 7
+
+
  228 00d0 9818     		adds	r0, r3, r2
  229 00d2 7B68     		ldr	r3, [r7, #4]
  230 00d4 5B68     		ldr	r3, [r3, #4]
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 7
-
-
  231 00d6 0622     		movs	r2, #6
  232 00d8 1900     		movs	r1, r3
  233 00da FFF7FEFF 		bl	memcpy
-  87:BLE_Central_Observer.c ****                 sizeof(connectPeriphDevice[devIndex].bdAddr));
-  88:BLE_Central_Observer.c ****                 connectPeriphDevice[devIndex].type = 1;
- 234              		.loc 1 88 0
- 235 00de 474B     		ldr	r3, .L14
+  90:BLE_Central_Observer.c ****                 sizeof(connectPeriphDevice[devIndex].bdAddr));
+  91:BLE_Central_Observer.c ****                 connectPeriphDevice[devIndex].type = 1;
+ 234              		.loc 1 91 0
+ 235 00de 474B     		ldr	r3, .L13
  236 00e0 1B78     		ldrb	r3, [r3]
  237 00e2 1900     		movs	r1, r3
- 238 00e4 494A     		ldr	r2, .L14+16
+ 238 00e4 494A     		ldr	r2, .L13+16
  239 00e6 0B00     		movs	r3, r1
  240 00e8 DB00     		lsls	r3, r3, #3
  241 00ea 5B1A     		subs	r3, r3, r1
@@ -378,89 +381,90 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  243 00ee 0633     		adds	r3, r3, #6
  244 00f0 0122     		movs	r2, #1
  245 00f2 1A70     		strb	r2, [r3]
-  89:BLE_Central_Observer.c ****                 
-  90:BLE_Central_Observer.c ****                 printf ("\n\n");  
- 246              		.loc 1 90 0
- 247 00f4 464B     		ldr	r3, .L14+20
+  92:BLE_Central_Observer.c ****                 
+  93:BLE_Central_Observer.c ****                 printf ("\n\n");  
+ 246              		.loc 1 93 0
+ 247 00f4 464B     		ldr	r3, .L13+20
  248 00f6 1800     		movs	r0, r3
  249 00f8 FFF7FEFF 		bl	puts
-  91:BLE_Central_Observer.c ****                 printf ("Found Device No: %d\r\n",devIndex);
- 250              		.loc 1 91 0
- 251 00fc 3F4B     		ldr	r3, .L14
+  94:BLE_Central_Observer.c ****                 printf ("Found Device No: %d\r\n",devIndex);
+ 250              		.loc 1 94 0
+ 251 00fc 3F4B     		ldr	r3, .L13
  252 00fe 1B78     		ldrb	r3, [r3]
  253 0100 1A00     		movs	r2, r3
- 254 0102 444B     		ldr	r3, .L14+24
+ 254 0102 444B     		ldr	r3, .L13+24
  255 0104 1100     		movs	r1, r2
  256 0106 1800     		movs	r0, r3
  257 0108 FFF7FEFF 		bl	printf
-  92:BLE_Central_Observer.c ****         		
-  93:BLE_Central_Observer.c ****         	    printf("RSSI: %d \r\n",scanReport->rssi);
- 258              		.loc 1 93 0
+  95:BLE_Central_Observer.c ****                 //printf ("Found Device: \r\n");
+  96:BLE_Central_Observer.c ****         		
+  97:BLE_Central_Observer.c ****         	    printf("RSSI: %d \r\n",scanReport->rssi);
+ 258              		.loc 1 97 0
  259 010c 7B68     		ldr	r3, [r7, #4]
  260 010e 1B7C     		ldrb	r3, [r3, #16]
  261 0110 5BB2     		sxtb	r3, r3
  262 0112 1A00     		movs	r2, r3
- 263 0114 404B     		ldr	r3, .L14+28
+ 263 0114 404B     		ldr	r3, .L13+28
  264 0116 1100     		movs	r1, r2
  265 0118 1800     		movs	r0, r3
  266 011a FFF7FEFF 		bl	printf
-  94:BLE_Central_Observer.c ****                 printf("peerBdAddr: %x%x%x%x%x%x \r\n",
-  95:BLE_Central_Observer.c ****                 scanReport->peerBdAddr[5u], 
- 267              		.loc 1 95 0
+  98:BLE_Central_Observer.c ****                 printf("peerBdAddr: %x%x%x%x%x%x \r\n",
+  99:BLE_Central_Observer.c ****                 scanReport->peerBdAddr[5u], 
+ 267              		.loc 1 99 0
  268 011e 7B68     		ldr	r3, [r7, #4]
  269 0120 5B68     		ldr	r3, [r3, #4]
  270 0122 0533     		adds	r3, r3, #5
  271 0124 1B78     		ldrb	r3, [r3]
-  94:BLE_Central_Observer.c ****                 printf("peerBdAddr: %x%x%x%x%x%x \r\n",
- 272              		.loc 1 94 0
+  98:BLE_Central_Observer.c ****                 printf("peerBdAddr: %x%x%x%x%x%x \r\n",
+ 272              		.loc 1 98 0
  273 0126 1C00     		movs	r4, r3
-  96:BLE_Central_Observer.c ****                 scanReport->peerBdAddr[4u], 
- 274              		.loc 1 96 0
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 8
+
+
+ 100:BLE_Central_Observer.c ****                 scanReport->peerBdAddr[4u], 
+ 274              		.loc 1 100 0
  275 0128 7B68     		ldr	r3, [r7, #4]
  276 012a 5B68     		ldr	r3, [r3, #4]
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 8
-
-
  277 012c 0433     		adds	r3, r3, #4
  278 012e 1B78     		ldrb	r3, [r3]
-  94:BLE_Central_Observer.c ****                 printf("peerBdAddr: %x%x%x%x%x%x \r\n",
- 279              		.loc 1 94 0
+  98:BLE_Central_Observer.c ****                 printf("peerBdAddr: %x%x%x%x%x%x \r\n",
+ 279              		.loc 1 98 0
  280 0130 1D00     		movs	r5, r3
-  97:BLE_Central_Observer.c ****                 scanReport->peerBdAddr[3u], 
- 281              		.loc 1 97 0
+ 101:BLE_Central_Observer.c ****                 scanReport->peerBdAddr[3u], 
+ 281              		.loc 1 101 0
  282 0132 7B68     		ldr	r3, [r7, #4]
  283 0134 5B68     		ldr	r3, [r3, #4]
  284 0136 0333     		adds	r3, r3, #3
  285 0138 1B78     		ldrb	r3, [r3]
-  94:BLE_Central_Observer.c ****                 printf("peerBdAddr: %x%x%x%x%x%x \r\n",
- 286              		.loc 1 94 0
+  98:BLE_Central_Observer.c ****                 printf("peerBdAddr: %x%x%x%x%x%x \r\n",
+ 286              		.loc 1 98 0
  287 013a 1E00     		movs	r6, r3
-  98:BLE_Central_Observer.c ****                 scanReport->peerBdAddr[2u], 
- 288              		.loc 1 98 0
+ 102:BLE_Central_Observer.c ****                 scanReport->peerBdAddr[2u], 
+ 288              		.loc 1 102 0
  289 013c 7B68     		ldr	r3, [r7, #4]
  290 013e 5B68     		ldr	r3, [r3, #4]
  291 0140 0233     		adds	r3, r3, #2
  292 0142 1B78     		ldrb	r3, [r3]
-  94:BLE_Central_Observer.c ****                 scanReport->peerBdAddr[5u], 
- 293              		.loc 1 94 0
+  98:BLE_Central_Observer.c ****                 scanReport->peerBdAddr[5u], 
+ 293              		.loc 1 98 0
  294 0144 1A00     		movs	r2, r3
-  99:BLE_Central_Observer.c ****                 scanReport->peerBdAddr[1u], 
- 295              		.loc 1 99 0
+ 103:BLE_Central_Observer.c ****                 scanReport->peerBdAddr[1u], 
+ 295              		.loc 1 103 0
  296 0146 7B68     		ldr	r3, [r7, #4]
  297 0148 5B68     		ldr	r3, [r3, #4]
  298 014a 0133     		adds	r3, r3, #1
  299 014c 1B78     		ldrb	r3, [r3]
-  94:BLE_Central_Observer.c ****                 scanReport->peerBdAddr[5u], 
- 300              		.loc 1 94 0
+  98:BLE_Central_Observer.c ****                 scanReport->peerBdAddr[5u], 
+ 300              		.loc 1 98 0
  301 014e 1900     		movs	r1, r3
- 100:BLE_Central_Observer.c ****                 scanReport->peerBdAddr[0u]);
- 302              		.loc 1 100 0
+ 104:BLE_Central_Observer.c ****                 scanReport->peerBdAddr[0u]);
+ 302              		.loc 1 104 0
  303 0150 7B68     		ldr	r3, [r7, #4]
  304 0152 5B68     		ldr	r3, [r3, #4]
  305 0154 1B78     		ldrb	r3, [r3]
-  94:BLE_Central_Observer.c ****                 scanReport->peerBdAddr[5u], 
- 306              		.loc 1 94 0
- 307 0156 3148     		ldr	r0, .L14+32
+  98:BLE_Central_Observer.c ****                 scanReport->peerBdAddr[5u], 
+ 306              		.loc 1 98 0
+ 307 0156 3148     		ldr	r0, .L13+32
  308 0158 0293     		str	r3, [sp, #8]
  309 015a 0191     		str	r1, [sp, #4]
  310 015c 0092     		str	r2, [sp]
@@ -468,61 +472,61 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  312 0160 2A00     		movs	r2, r5
  313 0162 2100     		movs	r1, r4
  314 0164 FFF7FEFF 		bl	printf
- 101:BLE_Central_Observer.c **** 
- 102:BLE_Central_Observer.c ****                 printf("Peer device adveritsing data Length: %d \r\n", scanReport->dataLen);
- 315              		.loc 1 102 0
+ 105:BLE_Central_Observer.c **** 
+ 106:BLE_Central_Observer.c ****                 printf("Peer device adveritsing data Length: %d \r\n", scanReport->dataLen);
+ 315              		.loc 1 106 0
  316 0168 7B68     		ldr	r3, [r7, #4]
  317 016a 1B7A     		ldrb	r3, [r3, #8]
  318 016c 1A00     		movs	r2, r3
- 319 016e 2C4B     		ldr	r3, .L14+36
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 9
+
+
+ 319 016e 2C4B     		ldr	r3, .L13+36
  320 0170 1100     		movs	r1, r2
  321 0172 1800     		movs	r0, r3
  322 0174 FFF7FEFF 		bl	printf
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 9
-
-
- 103:BLE_Central_Observer.c ****                 devIndex++;
- 323              		.loc 1 103 0
- 324 0178 204B     		ldr	r3, .L14
+ 107:BLE_Central_Observer.c ****                 devIndex++;
+ 323              		.loc 1 107 0
+ 324 0178 204B     		ldr	r3, .L13
  325 017a 1B78     		ldrb	r3, [r3]
  326 017c 0133     		adds	r3, r3, #1
  327 017e DAB2     		uxtb	r2, r3
- 328 0180 1E4B     		ldr	r3, .L14
+ 328 0180 1E4B     		ldr	r3, .L13
  329 0182 1A70     		strb	r2, [r3]
  330 0184 32E0     		b	.L2
  331              	.L10:
- 104:BLE_Central_Observer.c ****             }
- 105:BLE_Central_Observer.c ****             //receiving Scan response Packet
- 106:BLE_Central_Observer.c ****             else if (scanReport->eventType == CYBLE_GAPC_SCAN_RSP)
- 332              		.loc 1 106 0
+ 108:BLE_Central_Observer.c ****             }
+ 109:BLE_Central_Observer.c ****             //receiving Scan response Packet
+ 110:BLE_Central_Observer.c ****             else if (scanReport->eventType == CYBLE_GAPC_SCAN_RSP)
+ 332              		.loc 1 110 0
  333 0186 7B68     		ldr	r3, [r7, #4]
  334 0188 1B78     		ldrb	r3, [r3]
  335 018a 042B     		cmp	r3, #4
  336 018c 2ED1     		bne	.L2
- 107:BLE_Central_Observer.c ****             {
- 108:BLE_Central_Observer.c ****               printf ("Scan Response Data:  \r\n");
- 337              		.loc 1 108 0
- 338 018e 254B     		ldr	r3, .L14+40
+ 111:BLE_Central_Observer.c ****             {
+ 112:BLE_Central_Observer.c ****               printf ("Scan Response Data:  \r\n");
+ 337              		.loc 1 112 0
+ 338 018e 254B     		ldr	r3, .L13+40
  339 0190 1800     		movs	r0, r3
  340 0192 FFF7FEFF 		bl	puts
- 109:BLE_Central_Observer.c ****               if(scanReport->dataLen!=0)
- 341              		.loc 1 109 0
+ 113:BLE_Central_Observer.c ****               if(scanReport->dataLen!=0)
+ 341              		.loc 1 113 0
  342 0196 7B68     		ldr	r3, [r7, #4]
  343 0198 1B7A     		ldrb	r3, [r3, #8]
  344 019a 002B     		cmp	r3, #0
  345 019c 26D0     		beq	.L2
- 110:BLE_Central_Observer.c ****               {
- 111:BLE_Central_Observer.c ****                 for(RepIndex = 0u; RepIndex < scanReport->dataLen; RepIndex++)
- 346              		.loc 1 111 0
+ 114:BLE_Central_Observer.c ****               {
+ 115:BLE_Central_Observer.c ****                 for(RepIndex = 0u; RepIndex < scanReport->dataLen; RepIndex++)
+ 346              		.loc 1 115 0
  347 019e 0F23     		movs	r3, #15
  348 01a0 FB18     		adds	r3, r7, r3
  349 01a2 0022     		movs	r2, #0
  350 01a4 1A70     		strb	r2, [r3]
- 351 01a6 13E0     		b	.L12
- 352              	.L13:
- 112:BLE_Central_Observer.c ****                 {
- 113:BLE_Central_Observer.c ****                   printf("%x", scanReport->data[RepIndex]);
- 353              		.loc 1 113 0 discriminator 3
+ 351 01a6 13E0     		b	.L11
+ 352              	.L12:
+ 116:BLE_Central_Observer.c ****                 {
+ 117:BLE_Central_Observer.c ****                   printf("%x", scanReport->data[RepIndex]);
+ 353              		.loc 1 117 0 discriminator 3
  354 01a8 7B68     		ldr	r3, [r7, #4]
  355 01aa DA68     		ldr	r2, [r3, #12]
  356 01ac 0F23     		movs	r3, #15
@@ -531,76 +535,76 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  359 01b2 D318     		adds	r3, r2, r3
  360 01b4 1B78     		ldrb	r3, [r3]
  361 01b6 1A00     		movs	r2, r3
- 362 01b8 1B4B     		ldr	r3, .L14+44
+ 362 01b8 1B4B     		ldr	r3, .L13+44
  363 01ba 1100     		movs	r1, r2
  364 01bc 1800     		movs	r0, r3
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 10
+
+
  365 01be FFF7FEFF 		bl	printf
- 111:BLE_Central_Observer.c ****                 {
- 366              		.loc 1 111 0 discriminator 3
+ 115:BLE_Central_Observer.c ****                 {
+ 366              		.loc 1 115 0 discriminator 3
  367 01c2 0F23     		movs	r3, #15
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 10
-
-
  368 01c4 FB18     		adds	r3, r7, r3
  369 01c6 1A78     		ldrb	r2, [r3]
  370 01c8 0F23     		movs	r3, #15
  371 01ca FB18     		adds	r3, r7, r3
  372 01cc 0132     		adds	r2, r2, #1
  373 01ce 1A70     		strb	r2, [r3]
- 374              	.L12:
- 111:BLE_Central_Observer.c ****                 {
- 375              		.loc 1 111 0 is_stmt 0 discriminator 1
+ 374              	.L11:
+ 115:BLE_Central_Observer.c ****                 {
+ 375              		.loc 1 115 0 is_stmt 0 discriminator 1
  376 01d0 7B68     		ldr	r3, [r7, #4]
  377 01d2 1B7A     		ldrb	r3, [r3, #8]
  378 01d4 0F22     		movs	r2, #15
  379 01d6 BA18     		adds	r2, r7, r2
  380 01d8 1278     		ldrb	r2, [r2]
  381 01da 9A42     		cmp	r2, r3
- 382 01dc E4D3     		bcc	.L13
- 114:BLE_Central_Observer.c ****                 }
- 115:BLE_Central_Observer.c ****                 printf("\r\n");
- 383              		.loc 1 115 0 is_stmt 1
- 384 01de 134B     		ldr	r3, .L14+48
+ 382 01dc E4D3     		bcc	.L12
+ 118:BLE_Central_Observer.c ****                 }
+ 119:BLE_Central_Observer.c ****                 printf("\r\n");
+ 383              		.loc 1 119 0 is_stmt 1
+ 384 01de 134B     		ldr	r3, .L13+48
  385 01e0 1800     		movs	r0, r3
  386 01e2 FFF7FEFF 		bl	puts
- 116:BLE_Central_Observer.c ****                 printf ("\n");
- 387              		.loc 1 116 0
+ 120:BLE_Central_Observer.c ****                 printf ("\n");
+ 387              		.loc 1 120 0
  388 01e6 0A20     		movs	r0, #10
  389 01e8 FFF7FEFF 		bl	putchar
  390              	.L2:
  391              	.LBE2:
- 117:BLE_Central_Observer.c ****               }
- 118:BLE_Central_Observer.c ****             }
- 119:BLE_Central_Observer.c ****         }
- 120:BLE_Central_Observer.c ****         
- 121:BLE_Central_Observer.c ****         else
- 122:BLE_Central_Observer.c ****         {
- 123:BLE_Central_Observer.c ****            // printf ("Device Counts Exceeds 10 \r\n");
- 124:BLE_Central_Observer.c ****           //  devIndex++;
- 125:BLE_Central_Observer.c ****         }
- 126:BLE_Central_Observer.c ****         
- 127:BLE_Central_Observer.c ****     }
- 128:BLE_Central_Observer.c **** 		check = 0;
- 392              		.loc 1 128 0
- 393 01ec 054B     		ldr	r3, .L14+8
+ 121:BLE_Central_Observer.c ****               }
+ 122:BLE_Central_Observer.c ****             }
+ 123:BLE_Central_Observer.c ****         }
+ 124:BLE_Central_Observer.c ****         /*
+ 125:BLE_Central_Observer.c ****         else
+ 126:BLE_Central_Observer.c ****         {
+ 127:BLE_Central_Observer.c ****            // printf ("Device Counts Exceeds 10 \r\n");
+ 128:BLE_Central_Observer.c ****            // devIndex++;
+ 129:BLE_Central_Observer.c ****         }
+ 130:BLE_Central_Observer.c ****         */
+ 131:BLE_Central_Observer.c ****     }
+ 132:BLE_Central_Observer.c **** 		check = 0;
+ 392              		.loc 1 132 0
+ 393 01ec 054B     		ldr	r3, .L13+8
  394 01ee 0022     		movs	r2, #0
  395 01f0 1A60     		str	r2, [r3]
- 129:BLE_Central_Observer.c **** }
- 396              		.loc 1 129 0
+ 133:BLE_Central_Observer.c **** }
+ 396              		.loc 1 133 0
  397 01f2 C046     		nop
  398 01f4 BD46     		mov	sp, r7
  399 01f6 05B0     		add	sp, sp, #20
  400              		@ sp needed
  401 01f8 F0BD     		pop	{r4, r5, r6, r7, pc}
- 402              	.L15:
+ 402              	.L14:
  403 01fa C046     		.align	2
- 404              	.L14:
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 11
+
+
+ 404              	.L13:
  405 01fc 00000000 		.word	devIndex
  406 0200 00000000 		.word	bt_addr
  407 0204 00000000 		.word	check
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 11
-
-
  408 0208 00000000 		.word	IsDetected
  409 020c 00000000 		.word	connectPeriphDevice
  410 0210 00000000 		.word	.LC5
@@ -654,13 +658,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  440 011c 53746172 		.ascii	"Start Scanning Failed\000"
  440      74205363 
  440      616E6E69 
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 12
+
+
  440      6E672046 
  440      61696C65 
  441 0132 0000     		.align	2
  442              	.LC37:
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 12
-
-
  443 0134 5363616E 		.ascii	"Scanning\015\000"
  443      6E696E67 
  443      0D00
@@ -672,24 +676,24 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  449              		.type	StackEventHandler, %function
  450              	StackEventHandler:
  451              	.LFB39:
- 130:BLE_Central_Observer.c **** 
- 131:BLE_Central_Observer.c **** /*******************************************************************************
- 132:BLE_Central_Observer.c **** * Function Name: StackEventHandler
- 133:BLE_Central_Observer.c **** ********************************************************************************
- 134:BLE_Central_Observer.c **** * Summary:
- 135:BLE_Central_Observer.c **** *        Call back event function to handle various events from BLE stack
- 136:BLE_Central_Observer.c **** *
- 137:BLE_Central_Observer.c **** * Parameters:
- 138:BLE_Central_Observer.c **** *  event:		event returned
- 139:BLE_Central_Observer.c **** *  eventParam:	link to value of the event parameter returned
+ 134:BLE_Central_Observer.c **** 
+ 135:BLE_Central_Observer.c **** /*******************************************************************************
+ 136:BLE_Central_Observer.c **** * Function Name: StackEventHandler
+ 137:BLE_Central_Observer.c **** ********************************************************************************
+ 138:BLE_Central_Observer.c **** * Summary:
+ 139:BLE_Central_Observer.c **** *        Call back event function to handle various events from BLE stack
  140:BLE_Central_Observer.c **** *
- 141:BLE_Central_Observer.c **** * Return:
- 142:BLE_Central_Observer.c **** *  void
- 143:BLE_Central_Observer.c **** *
- 144:BLE_Central_Observer.c **** *******************************************************************************/
- 145:BLE_Central_Observer.c **** void StackEventHandler(uint32 event, void *eventParam)
- 146:BLE_Central_Observer.c **** {
- 452              		.loc 1 146 0
+ 141:BLE_Central_Observer.c **** * Parameters:
+ 142:BLE_Central_Observer.c **** *  event:		event returned
+ 143:BLE_Central_Observer.c **** *  eventParam:	link to value of the event parameter returned
+ 144:BLE_Central_Observer.c **** *
+ 145:BLE_Central_Observer.c **** * Return:
+ 146:BLE_Central_Observer.c **** *  void
+ 147:BLE_Central_Observer.c **** *
+ 148:BLE_Central_Observer.c **** *******************************************************************************/
+ 149:BLE_Central_Observer.c **** void StackEventHandler(uint32 event, void *eventParam)
+ 150:BLE_Central_Observer.c **** {
+ 452              		.loc 1 150 0
  453              		.cfi_startproc
  454              		@ args = 0, pretend = 0, frame = 32
  455              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -703,308 +707,308 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  463              		.cfi_def_cfa_register 7
  464 0006 7860     		str	r0, [r7, #4]
  465 0008 3960     		str	r1, [r7]
- 147:BLE_Central_Observer.c **** 	CYBLE_GAPC_ADV_REPORT_T advReport;
- 148:BLE_Central_Observer.c ****    
- 149:BLE_Central_Observer.c **** 	switch(event)
- 466              		.loc 1 149 0
+ 151:BLE_Central_Observer.c **** 	CYBLE_GAPC_ADV_REPORT_T advReport;
+ 152:BLE_Central_Observer.c ****    
+ 153:BLE_Central_Observer.c **** 	switch(event)
+ 466              		.loc 1 153 0
  467 000a 7B68     		ldr	r3, [r7, #4]
  468 000c 202B     		cmp	r3, #32
- 469 000e 34D0     		beq	.L18
- 470 0010 04D8     		bhi	.L19
+ 469 000e 34D0     		beq	.L17
+ 470 0010 04D8     		bhi	.L18
  471 0012 012B     		cmp	r3, #1
- 472 0014 09D0     		beq	.L20
+ 472 0014 09D0     		beq	.L19
  473 0016 022B     		cmp	r3, #2
- 474 0018 1BD0     		beq	.L21
- 150:BLE_Central_Observer.c **** 	{
- 151:BLE_Central_Observer.c **** 		case CYBLE_EVT_STACK_ON:
- 152:BLE_Central_Observer.c ****             printf("BLE ON:Started to Scan\r\n");
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 13
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 13
 
 
- 153:BLE_Central_Observer.c ****            
- 154:BLE_Central_Observer.c **** 	        if(CYBLE_ERROR_OK == CyBle_GapcStartScan(CYBLE_SCANNING_FAST))
- 155:BLE_Central_Observer.c **** 	        {
- 156:BLE_Central_Observer.c ****               GREEN_LED_ON(); /*scanning*/
- 157:BLE_Central_Observer.c **** 	        }
- 158:BLE_Central_Observer.c **** 			break;
- 159:BLE_Central_Observer.c **** 		
- 160:BLE_Central_Observer.c ****         case CYBLE_EVT_TIMEOUT:
- 161:BLE_Central_Observer.c ****          if( CYBLE_GAP_SCAN_TO ==*(uint16*) eventParam)
- 162:BLE_Central_Observer.c ****             {
- 163:BLE_Central_Observer.c ****                 printf("TIME OUT\r\n");
- 164:BLE_Central_Observer.c ****                 // Start Scanning again when timeout occurs
- 165:BLE_Central_Observer.c ****                 CyBle_GapcStartScan(CYBLE_SCANNING_SLOW);
- 166:BLE_Central_Observer.c ****                 GREEN_LED_ON();
- 167:BLE_Central_Observer.c ****              }
- 168:BLE_Central_Observer.c **** 			
- 169:BLE_Central_Observer.c **** 		case CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT:
- 170:BLE_Central_Observer.c ****                 /*Get the information from advertisement and scan response packets*/
- 171:BLE_Central_Observer.c ****              Get_Adv_Scan_Packets((CYBLE_GAPC_ADV_REPORT_T *)eventParam);
- 172:BLE_Central_Observer.c ****              memcpy(&advReport, eventParam, sizeof(advReport)); 
- 173:BLE_Central_Observer.c **** 
- 174:BLE_Central_Observer.c **** 		break;
- 175:BLE_Central_Observer.c **** 			
- 176:BLE_Central_Observer.c ****  		case CYBLE_EVT_GATT_CONNECT_IND:
- 177:BLE_Central_Observer.c **** 			/* When the peripheral device is connected, store the connection handle.*/      
- 178:BLE_Central_Observer.c ****             IsConnected = 1;
- 179:BLE_Central_Observer.c ****             connHandle = *(CYBLE_CONN_HANDLE_T *)eventParam;
- 180:BLE_Central_Observer.c **** 			break;
- 181:BLE_Central_Observer.c **** 		
- 182:BLE_Central_Observer.c **** 		case CYBLE_EVT_GAP_DEVICE_CONNECTED:
- 183:BLE_Central_Observer.c ****              devIndex = 0;
- 184:BLE_Central_Observer.c **** 	         printf("Peripheral connected. Press 'D' for disconnection \r\n");
- 185:BLE_Central_Observer.c ****              BLUE_LED_ON();
- 186:BLE_Central_Observer.c ****              if(CYBLE_ERROR_OK != CyBle_GapcStartScan(CYBLE_SCANNING_FAST))
- 187:BLE_Central_Observer.c **** 		      {
- 188:BLE_Central_Observer.c ****                printf ("Start Scanning Failed \r\n");
- 189:BLE_Central_Observer.c **** 		      }
- 190:BLE_Central_Observer.c ****             
- 191:BLE_Central_Observer.c ****         break;
- 192:BLE_Central_Observer.c **** 			
- 193:BLE_Central_Observer.c **** 		case CYBLE_EVT_GAP_DEVICE_DISCONNECTED:
- 194:BLE_Central_Observer.c ****             RED_LED_ON();
- 195:BLE_Central_Observer.c ****             IsConnected = 0;
- 196:BLE_Central_Observer.c ****             printf("Peripheral Disconnected \r\n");
- 197:BLE_Central_Observer.c ****             if (!(IsSelected))
- 198:BLE_Central_Observer.c ****             {
- 199:BLE_Central_Observer.c ****               if(CYBLE_ERROR_OK != CyBle_GapcStartScan(CYBLE_SCANNING_FAST))
- 200:BLE_Central_Observer.c ****     	       {
- 201:BLE_Central_Observer.c ****                  printf ("Start Scanning Failed");
- 202:BLE_Central_Observer.c ****                }
- 203:BLE_Central_Observer.c ****                else
- 204:BLE_Central_Observer.c ****                {
- 205:BLE_Central_Observer.c ****                  GREEN_LED_ON();
- 206:BLE_Central_Observer.c ****                  printf ("Scanning\r\n");
- 207:BLE_Central_Observer.c ****                }
- 208:BLE_Central_Observer.c ****             }
- 209:BLE_Central_Observer.c ****            break;
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 14
+ 474 0018 1BD0     		beq	.L20
+ 154:BLE_Central_Observer.c **** 	{
+ 155:BLE_Central_Observer.c **** 		case CYBLE_EVT_STACK_ON:
+ 156:BLE_Central_Observer.c ****             printf("BLE ON:Started to Scan\r\n");
+ 157:BLE_Central_Observer.c ****            
+ 158:BLE_Central_Observer.c **** 	        if(CYBLE_ERROR_OK == CyBle_GapcStartScan(CYBLE_SCANNING_FAST))
+ 159:BLE_Central_Observer.c **** 	        {
+ 160:BLE_Central_Observer.c ****               GREEN_LED_ON(); /*scanning*/
+ 161:BLE_Central_Observer.c **** 	        }
+ 162:BLE_Central_Observer.c **** 			break;
+ 163:BLE_Central_Observer.c **** 		
+ 164:BLE_Central_Observer.c ****         case CYBLE_EVT_TIMEOUT:
+ 165:BLE_Central_Observer.c ****             printf("TIME OUT\r\n");
+ 166:BLE_Central_Observer.c ****          if( CYBLE_GAP_SCAN_TO ==*(uint16*) eventParam)
+ 167:BLE_Central_Observer.c ****             {       
+ 168:BLE_Central_Observer.c ****                 // Start Scanning again when timeout occurs
+ 169:BLE_Central_Observer.c ****                 CyBle_GapcStartScan(CYBLE_SCANNING_SLOW);
+ 170:BLE_Central_Observer.c ****                 GREEN_LED_ON();
+ 171:BLE_Central_Observer.c ****              }
+ 172:BLE_Central_Observer.c **** 			
+ 173:BLE_Central_Observer.c **** 		case CYBLE_EVT_GAPC_SCAN_PROGRESS_RESULT:
+ 174:BLE_Central_Observer.c ****                 /*Get the information from advertisement and scan response packets*/
+ 175:BLE_Central_Observer.c ****              Get_Adv_Scan_Packets((CYBLE_GAPC_ADV_REPORT_T *)eventParam);
+ 176:BLE_Central_Observer.c ****              memcpy(&advReport, eventParam, sizeof(advReport)); 
+ 177:BLE_Central_Observer.c **** 
+ 178:BLE_Central_Observer.c **** 		break;
+ 179:BLE_Central_Observer.c **** 			
+ 180:BLE_Central_Observer.c ****  		case CYBLE_EVT_GATT_CONNECT_IND:
+ 181:BLE_Central_Observer.c **** 			/* When the peripheral device is connected, store the connection handle.*/      
+ 182:BLE_Central_Observer.c ****             IsConnected = 1;
+ 183:BLE_Central_Observer.c ****             connHandle = *(CYBLE_CONN_HANDLE_T *)eventParam;
+ 184:BLE_Central_Observer.c **** 			break;
+ 185:BLE_Central_Observer.c **** 		
+ 186:BLE_Central_Observer.c **** 		case CYBLE_EVT_GAP_DEVICE_CONNECTED:
+ 187:BLE_Central_Observer.c ****              devIndex = 0;
+ 188:BLE_Central_Observer.c **** 	         printf("Peripheral connected. Press 'D' for disconnection \r\n");
+ 189:BLE_Central_Observer.c ****              BLUE_LED_ON();
+ 190:BLE_Central_Observer.c ****              if(CYBLE_ERROR_OK != CyBle_GapcStartScan(CYBLE_SCANNING_FAST))
+ 191:BLE_Central_Observer.c **** 		      {
+ 192:BLE_Central_Observer.c ****                printf ("Start Scanning Failed \r\n");
+ 193:BLE_Central_Observer.c **** 		      }
+ 194:BLE_Central_Observer.c ****             
+ 195:BLE_Central_Observer.c ****         break;
+ 196:BLE_Central_Observer.c **** 			
+ 197:BLE_Central_Observer.c **** 		case CYBLE_EVT_GAP_DEVICE_DISCONNECTED:
+ 198:BLE_Central_Observer.c ****             RED_LED_ON();
+ 199:BLE_Central_Observer.c ****             IsConnected = 0;
+ 200:BLE_Central_Observer.c ****             printf("Peripheral Disconnected \r\n");
+ 201:BLE_Central_Observer.c ****             if (!(IsSelected))
+ 202:BLE_Central_Observer.c ****             {
+ 203:BLE_Central_Observer.c ****               if(CYBLE_ERROR_OK != CyBle_GapcStartScan(CYBLE_SCANNING_FAST))
+ 204:BLE_Central_Observer.c ****     	       {
+ 205:BLE_Central_Observer.c ****                  printf ("Start Scanning Failed");
+ 206:BLE_Central_Observer.c ****                }
+ 207:BLE_Central_Observer.c ****                else
+ 208:BLE_Central_Observer.c ****                {
+ 209:BLE_Central_Observer.c ****                  GREEN_LED_ON();
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 14
 
 
- 210:BLE_Central_Observer.c **** 
- 211:BLE_Central_Observer.c **** 		default:
- 212:BLE_Central_Observer.c **** 			break;
- 475              		.loc 1 212 0
- 476 001a 91E0     		b	.L26
- 477              	.L19:
- 149:BLE_Central_Observer.c **** 	{
- 478              		.loc 1 149 0
+ 210:BLE_Central_Observer.c ****                  printf ("Scanning\r\n");
+ 211:BLE_Central_Observer.c ****                }
+ 212:BLE_Central_Observer.c ****             }
+ 213:BLE_Central_Observer.c ****            break;
+ 214:BLE_Central_Observer.c **** 
+ 215:BLE_Central_Observer.c **** 		default:
+ 216:BLE_Central_Observer.c **** 			break;
+ 475              		.loc 1 216 0
+ 476 001a 91E0     		b	.L25
+ 477              	.L18:
+ 153:BLE_Central_Observer.c **** 	{
+ 478              		.loc 1 153 0
  479 001c 282B     		cmp	r3, #40
- 480 001e 5ED0     		beq	.L22
+ 480 001e 5ED0     		beq	.L21
  481 0020 412B     		cmp	r3, #65
- 482 0022 36D0     		beq	.L23
+ 482 0022 36D0     		beq	.L22
  483 0024 272B     		cmp	r3, #39
- 484 0026 40D0     		beq	.L24
- 485              		.loc 1 212 0
- 486 0028 8AE0     		b	.L26
- 487              	.L20:
- 152:BLE_Central_Observer.c ****            
- 488              		.loc 1 152 0
- 489 002a 474B     		ldr	r3, .L33
+ 484 0026 40D0     		beq	.L23
+ 485              		.loc 1 216 0
+ 486 0028 8AE0     		b	.L25
+ 487              	.L19:
+ 156:BLE_Central_Observer.c ****            
+ 488              		.loc 1 156 0
+ 489 002a 474B     		ldr	r3, .L32
  490 002c 1800     		movs	r0, r3
  491 002e FFF7FEFF 		bl	puts
- 154:BLE_Central_Observer.c **** 	        {
- 492              		.loc 1 154 0
+ 158:BLE_Central_Observer.c **** 	        {
+ 492              		.loc 1 158 0
  493 0032 0020     		movs	r0, #0
  494 0034 FFF7FEFF 		bl	CyBle_GapcStartScan
  495 0038 031E     		subs	r3, r0, #0
  496 003a 00D0     		beq	.LCB348
- 497 003c 7BE0     		b	.L30	@long jump
+ 497 003c 7BE0     		b	.L29	@long jump
  498              	.LCB348:
- 156:BLE_Central_Observer.c **** 	        }
- 499              		.loc 1 156 0
+ 160:BLE_Central_Observer.c **** 	        }
+ 499              		.loc 1 160 0
  500 003e 0120     		movs	r0, #1
  501 0040 FFF7FEFF 		bl	RED_LED_Write
  502 0044 0020     		movs	r0, #0
  503 0046 FFF7FEFF 		bl	GREEN_LED_Write
  504 004a 0120     		movs	r0, #1
  505 004c FFF7FEFF 		bl	BLUE_LED_Write
- 158:BLE_Central_Observer.c **** 		
- 506              		.loc 1 158 0
- 507 0050 71E0     		b	.L30
- 508              	.L21:
- 161:BLE_Central_Observer.c ****             {
- 509              		.loc 1 161 0
- 510 0052 3B68     		ldr	r3, [r7]
- 511 0054 1B88     		ldrh	r3, [r3]
- 512 0056 022B     		cmp	r3, #2
- 513 0058 0FD1     		bne	.L18
- 163:BLE_Central_Observer.c ****                 // Start Scanning again when timeout occurs
- 514              		.loc 1 163 0
- 515 005a 3C4B     		ldr	r3, .L33+4
- 516 005c 1800     		movs	r0, r3
- 517 005e FFF7FEFF 		bl	puts
- 165:BLE_Central_Observer.c ****                 GREEN_LED_ON();
- 518              		.loc 1 165 0
+ 162:BLE_Central_Observer.c **** 		
+ 506              		.loc 1 162 0
+ 507 0050 71E0     		b	.L29
+ 508              	.L20:
+ 165:BLE_Central_Observer.c ****          if( CYBLE_GAP_SCAN_TO ==*(uint16*) eventParam)
+ 509              		.loc 1 165 0
+ 510 0052 3E4B     		ldr	r3, .L32+4
+ 511 0054 1800     		movs	r0, r3
+ 512 0056 FFF7FEFF 		bl	puts
+ 166:BLE_Central_Observer.c ****             {       
+ 513              		.loc 1 166 0
+ 514 005a 3B68     		ldr	r3, [r7]
+ 515 005c 1B88     		ldrh	r3, [r3]
+ 516 005e 022B     		cmp	r3, #2
+ 517 0060 0BD1     		bne	.L17
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 15
+
+
+ 169:BLE_Central_Observer.c ****                 GREEN_LED_ON();
+ 518              		.loc 1 169 0
  519 0062 0120     		movs	r0, #1
  520 0064 FFF7FEFF 		bl	CyBle_GapcStartScan
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 15
-
-
- 166:BLE_Central_Observer.c ****              }
- 521              		.loc 1 166 0
+ 170:BLE_Central_Observer.c ****              }
+ 521              		.loc 1 170 0
  522 0068 0120     		movs	r0, #1
  523 006a FFF7FEFF 		bl	RED_LED_Write
  524 006e 0020     		movs	r0, #0
  525 0070 FFF7FEFF 		bl	GREEN_LED_Write
  526 0074 0120     		movs	r0, #1
  527 0076 FFF7FEFF 		bl	BLUE_LED_Write
- 528              	.L18:
- 171:BLE_Central_Observer.c ****              memcpy(&advReport, eventParam, sizeof(advReport)); 
- 529              		.loc 1 171 0
+ 528              	.L17:
+ 175:BLE_Central_Observer.c ****              memcpy(&advReport, eventParam, sizeof(advReport)); 
+ 529              		.loc 1 175 0
  530 007a 3B68     		ldr	r3, [r7]
  531 007c 1800     		movs	r0, r3
  532 007e FFF7FEFF 		bl	Get_Adv_Scan_Packets
- 172:BLE_Central_Observer.c **** 
- 533              		.loc 1 172 0
+ 176:BLE_Central_Observer.c **** 
+ 533              		.loc 1 176 0
  534 0082 3968     		ldr	r1, [r7]
  535 0084 0C23     		movs	r3, #12
  536 0086 FB18     		adds	r3, r7, r3
  537 0088 1422     		movs	r2, #20
  538 008a 1800     		movs	r0, r3
  539 008c FFF7FEFF 		bl	memcpy
- 174:BLE_Central_Observer.c **** 			
- 540              		.loc 1 174 0
- 541 0090 56E0     		b	.L26
- 542              	.L23:
- 178:BLE_Central_Observer.c ****             connHandle = *(CYBLE_CONN_HANDLE_T *)eventParam;
- 543              		.loc 1 178 0
- 544 0092 2F4B     		ldr	r3, .L33+8
+ 178:BLE_Central_Observer.c **** 			
+ 540              		.loc 1 178 0
+ 541 0090 56E0     		b	.L25
+ 542              	.L22:
+ 182:BLE_Central_Observer.c ****             connHandle = *(CYBLE_CONN_HANDLE_T *)eventParam;
+ 543              		.loc 1 182 0
+ 544 0092 2F4B     		ldr	r3, .L32+8
  545 0094 0122     		movs	r2, #1
  546 0096 1A70     		strb	r2, [r3]
- 179:BLE_Central_Observer.c **** 			break;
- 547              		.loc 1 179 0
- 548 0098 2E4A     		ldr	r2, .L33+12
+ 183:BLE_Central_Observer.c **** 			break;
+ 547              		.loc 1 183 0
+ 548 0098 2E4A     		ldr	r2, .L32+12
  549 009a 3B68     		ldr	r3, [r7]
  550 009c 1000     		movs	r0, r2
  551 009e 1900     		movs	r1, r3
  552 00a0 0223     		movs	r3, #2
  553 00a2 1A00     		movs	r2, r3
  554 00a4 FFF7FEFF 		bl	memcpy
- 180:BLE_Central_Observer.c **** 		
- 555              		.loc 1 180 0
- 556 00a8 4AE0     		b	.L26
- 557              	.L24:
- 183:BLE_Central_Observer.c **** 	         printf("Peripheral connected. Press 'D' for disconnection \r\n");
- 558              		.loc 1 183 0
- 559 00aa 2B4B     		ldr	r3, .L33+16
+ 184:BLE_Central_Observer.c **** 		
+ 555              		.loc 1 184 0
+ 556 00a8 4AE0     		b	.L25
+ 557              	.L23:
+ 187:BLE_Central_Observer.c **** 	         printf("Peripheral connected. Press 'D' for disconnection \r\n");
+ 558              		.loc 1 187 0
+ 559 00aa 2B4B     		ldr	r3, .L32+16
  560 00ac 0022     		movs	r2, #0
  561 00ae 1A70     		strb	r2, [r3]
- 184:BLE_Central_Observer.c ****              BLUE_LED_ON();
- 562              		.loc 1 184 0
- 563 00b0 2A4B     		ldr	r3, .L33+20
+ 188:BLE_Central_Observer.c ****              BLUE_LED_ON();
+ 562              		.loc 1 188 0
+ 563 00b0 2A4B     		ldr	r3, .L32+20
  564 00b2 1800     		movs	r0, r3
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 16
+
+
  565 00b4 FFF7FEFF 		bl	puts
- 185:BLE_Central_Observer.c ****              if(CYBLE_ERROR_OK != CyBle_GapcStartScan(CYBLE_SCANNING_FAST))
- 566              		.loc 1 185 0
+ 189:BLE_Central_Observer.c ****              if(CYBLE_ERROR_OK != CyBle_GapcStartScan(CYBLE_SCANNING_FAST))
+ 566              		.loc 1 189 0
  567 00b8 0120     		movs	r0, #1
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 16
-
-
  568 00ba FFF7FEFF 		bl	RED_LED_Write
  569 00be 0120     		movs	r0, #1
  570 00c0 FFF7FEFF 		bl	GREEN_LED_Write
  571 00c4 0020     		movs	r0, #0
  572 00c6 FFF7FEFF 		bl	BLUE_LED_Write
- 186:BLE_Central_Observer.c **** 		      {
- 573              		.loc 1 186 0
+ 190:BLE_Central_Observer.c **** 		      {
+ 573              		.loc 1 190 0
  574 00ca 0020     		movs	r0, #0
  575 00cc FFF7FEFF 		bl	CyBle_GapcStartScan
  576 00d0 031E     		subs	r3, r0, #0
- 577 00d2 32D0     		beq	.L31
- 188:BLE_Central_Observer.c **** 		      }
- 578              		.loc 1 188 0
- 579 00d4 224B     		ldr	r3, .L33+24
+ 577 00d2 32D0     		beq	.L30
+ 192:BLE_Central_Observer.c **** 		      }
+ 578              		.loc 1 192 0
+ 579 00d4 224B     		ldr	r3, .L32+24
  580 00d6 1800     		movs	r0, r3
  581 00d8 FFF7FEFF 		bl	puts
- 191:BLE_Central_Observer.c **** 			
- 582              		.loc 1 191 0
- 583 00dc 2DE0     		b	.L31
- 584              	.L22:
- 194:BLE_Central_Observer.c ****             IsConnected = 0;
- 585              		.loc 1 194 0
+ 195:BLE_Central_Observer.c **** 			
+ 582              		.loc 1 195 0
+ 583 00dc 2DE0     		b	.L30
+ 584              	.L21:
+ 198:BLE_Central_Observer.c ****             IsConnected = 0;
+ 585              		.loc 1 198 0
  586 00de 0020     		movs	r0, #0
  587 00e0 FFF7FEFF 		bl	RED_LED_Write
  588 00e4 0120     		movs	r0, #1
  589 00e6 FFF7FEFF 		bl	GREEN_LED_Write
  590 00ea 0120     		movs	r0, #1
  591 00ec FFF7FEFF 		bl	BLUE_LED_Write
- 195:BLE_Central_Observer.c ****             printf("Peripheral Disconnected \r\n");
- 592              		.loc 1 195 0
- 593 00f0 174B     		ldr	r3, .L33+8
+ 199:BLE_Central_Observer.c ****             printf("Peripheral Disconnected \r\n");
+ 592              		.loc 1 199 0
+ 593 00f0 174B     		ldr	r3, .L32+8
  594 00f2 0022     		movs	r2, #0
  595 00f4 1A70     		strb	r2, [r3]
- 196:BLE_Central_Observer.c ****             if (!(IsSelected))
- 596              		.loc 1 196 0
- 597 00f6 1B4B     		ldr	r3, .L33+28
+ 200:BLE_Central_Observer.c ****             if (!(IsSelected))
+ 596              		.loc 1 200 0
+ 597 00f6 1B4B     		ldr	r3, .L32+28
  598 00f8 1800     		movs	r0, r3
  599 00fa FFF7FEFF 		bl	puts
- 197:BLE_Central_Observer.c ****             {
- 600              		.loc 1 197 0
- 601 00fe 1A4B     		ldr	r3, .L33+32
+ 201:BLE_Central_Observer.c ****             {
+ 600              		.loc 1 201 0
+ 601 00fe 1A4B     		ldr	r3, .L32+32
  602 0100 1B78     		ldrb	r3, [r3]
  603 0102 002B     		cmp	r3, #0
- 604 0104 1BD1     		bne	.L32
- 199:BLE_Central_Observer.c ****     	       {
- 605              		.loc 1 199 0
+ 604 0104 1BD1     		bne	.L31
+ 203:BLE_Central_Observer.c ****     	       {
+ 605              		.loc 1 203 0
  606 0106 0020     		movs	r0, #0
  607 0108 FFF7FEFF 		bl	CyBle_GapcStartScan
  608 010c 031E     		subs	r3, r0, #0
- 609 010e 04D0     		beq	.L29
- 201:BLE_Central_Observer.c ****                }
- 610              		.loc 1 201 0
- 611 0110 164B     		ldr	r3, .L33+36
+ 609 010e 04D0     		beq	.L28
+ 205:BLE_Central_Observer.c ****                }
+ 610              		.loc 1 205 0
+ 611 0110 164B     		ldr	r3, .L32+36
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 17
+
+
  612 0112 1800     		movs	r0, r3
  613 0114 FFF7FEFF 		bl	printf
- 209:BLE_Central_Observer.c **** 
- 614              		.loc 1 209 0
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 17
-
-
- 615 0118 11E0     		b	.L32
- 616              	.L29:
- 205:BLE_Central_Observer.c ****                  printf ("Scanning\r\n");
- 617              		.loc 1 205 0
+ 213:BLE_Central_Observer.c **** 
+ 614              		.loc 1 213 0
+ 615 0118 11E0     		b	.L31
+ 616              	.L28:
+ 209:BLE_Central_Observer.c ****                  printf ("Scanning\r\n");
+ 617              		.loc 1 209 0
  618 011a 0120     		movs	r0, #1
  619 011c FFF7FEFF 		bl	RED_LED_Write
  620 0120 0020     		movs	r0, #0
  621 0122 FFF7FEFF 		bl	GREEN_LED_Write
  622 0126 0120     		movs	r0, #1
  623 0128 FFF7FEFF 		bl	BLUE_LED_Write
- 206:BLE_Central_Observer.c ****                }
- 624              		.loc 1 206 0
- 625 012c 104B     		ldr	r3, .L33+40
+ 210:BLE_Central_Observer.c ****                }
+ 624              		.loc 1 210 0
+ 625 012c 104B     		ldr	r3, .L32+40
  626 012e 1800     		movs	r0, r3
  627 0130 FFF7FEFF 		bl	puts
- 209:BLE_Central_Observer.c **** 
- 628              		.loc 1 209 0
- 629 0134 03E0     		b	.L32
- 630              	.L30:
- 158:BLE_Central_Observer.c **** 		
- 631              		.loc 1 158 0
+ 213:BLE_Central_Observer.c **** 
+ 628              		.loc 1 213 0
+ 629 0134 03E0     		b	.L31
+ 630              	.L29:
+ 162:BLE_Central_Observer.c **** 		
+ 631              		.loc 1 162 0
  632 0136 C046     		nop
- 633 0138 02E0     		b	.L26
- 634              	.L31:
- 191:BLE_Central_Observer.c **** 			
- 635              		.loc 1 191 0
+ 633 0138 02E0     		b	.L25
+ 634              	.L30:
+ 195:BLE_Central_Observer.c **** 			
+ 635              		.loc 1 195 0
  636 013a C046     		nop
- 637 013c 00E0     		b	.L26
- 638              	.L32:
- 209:BLE_Central_Observer.c **** 
- 639              		.loc 1 209 0
+ 637 013c 00E0     		b	.L25
+ 638              	.L31:
+ 213:BLE_Central_Observer.c **** 
+ 639              		.loc 1 213 0
  640 013e C046     		nop
- 641              	.L26:
- 213:BLE_Central_Observer.c **** 	}
- 214:BLE_Central_Observer.c **** }
- 642              		.loc 1 214 0 discriminator 1
+ 641              	.L25:
+ 217:BLE_Central_Observer.c **** 	}
+ 218:BLE_Central_Observer.c **** }
+ 642              		.loc 1 218 0 discriminator 1
  643 0140 C046     		nop
  644 0142 BD46     		mov	sp, r7
  645 0144 08B0     		add	sp, sp, #32
  646              		@ sp needed
  647 0146 80BD     		pop	{r7, pc}
- 648              	.L34:
+ 648              	.L33:
  649              		.align	2
- 650              	.L33:
+ 650              	.L32:
  651 0148 90000000 		.word	.LC21
  652 014c A8000000 		.word	.LC23
  653 0150 00000000 		.word	IsConnected
@@ -1014,13 +1018,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  657 0160 E8000000 		.word	.LC30
  658 0164 00010000 		.word	.LC32
  659 0168 00000000 		.word	IsSelected
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 18
+
+
  660 016c 1C010000 		.word	.LC35
  661 0170 34010000 		.word	.LC37
  662              		.cfi_endproc
  663              	.LFE39:
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 18
-
-
  664              		.size	StackEventHandler, .-StackEventHandler
  665              		.section	.rodata
  666 013e 0000     		.align	2
@@ -1045,23 +1049,23 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  677              		.type	Handle_ble_Central_Observer_State, %function
  678              	Handle_ble_Central_Observer_State:
  679              	.LFB40:
- 215:BLE_Central_Observer.c **** /*******************************************************************************
- 216:BLE_Central_Observer.c **** * Function Name: Handle_ble_Central_Observer_State
- 217:BLE_Central_Observer.c **** ********************************************************************************
- 218:BLE_Central_Observer.c **** * Summary:
- 219:BLE_Central_Observer.c **** * This function is used to handle connectio requests
- 220:BLE_Central_Observer.c **** *
- 221:BLE_Central_Observer.c **** * Parameters:
- 222:BLE_Central_Observer.c **** * None
- 223:BLE_Central_Observer.c **** *
- 224:BLE_Central_Observer.c **** * Return:
- 225:BLE_Central_Observer.c **** * void
- 226:BLE_Central_Observer.c **** *
- 227:BLE_Central_Observer.c **** *******************************************************************************/
- 228:BLE_Central_Observer.c **** 
- 229:BLE_Central_Observer.c **** void Handle_ble_Central_Observer_State(void)
- 230:BLE_Central_Observer.c **** {
- 680              		.loc 1 230 0
+ 219:BLE_Central_Observer.c **** /*******************************************************************************
+ 220:BLE_Central_Observer.c **** * Function Name: Handle_ble_Central_Observer_State
+ 221:BLE_Central_Observer.c **** ********************************************************************************
+ 222:BLE_Central_Observer.c **** * Summary:
+ 223:BLE_Central_Observer.c **** * This function is used to handle connectio requests
+ 224:BLE_Central_Observer.c **** *
+ 225:BLE_Central_Observer.c **** * Parameters:
+ 226:BLE_Central_Observer.c **** * None
+ 227:BLE_Central_Observer.c **** *
+ 228:BLE_Central_Observer.c **** * Return:
+ 229:BLE_Central_Observer.c **** * void
+ 230:BLE_Central_Observer.c **** *
+ 231:BLE_Central_Observer.c **** *******************************************************************************/
+ 232:BLE_Central_Observer.c **** 
+ 233:BLE_Central_Observer.c **** void Handle_ble_Central_Observer_State(void)
+ 234:BLE_Central_Observer.c **** {
+ 680              		.loc 1 234 0
  681              		.cfi_startproc
  682              		@ args = 0, pretend = 0, frame = 0
  683              		@ frame_needed = 1, uses_anonymous_args = 0
@@ -1071,109 +1075,109 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  687              		.cfi_offset 14, -4
  688 0002 00AF     		add	r7, sp, #0
  689              		.cfi_def_cfa_register 7
- 231:BLE_Central_Observer.c ****     if (CYBLE_STACK_STATE_BUSY == CyBle_GattGetBusStatus())
- 690              		.loc 1 231 0
- 691 0004 194B     		ldr	r3, .L41
+ 235:BLE_Central_Observer.c ****     if (CYBLE_STACK_STATE_BUSY == CyBle_GattGetBusStatus())
+ 690              		.loc 1 235 0
+ 691 0004 194B     		ldr	r3, .L40
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 19
+
+
  692 0006 1B78     		ldrb	r3, [r3]
  693 0008 DBB2     		uxtb	r3, r3
  694 000a 012B     		cmp	r3, #1
- 695 000c 2BD0     		beq	.L40
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 19
-
-
- 232:BLE_Central_Observer.c ****     {
- 233:BLE_Central_Observer.c ****         /*If stack is busy wait for ready signal*/
- 234:BLE_Central_Observer.c ****         return;
- 235:BLE_Central_Observer.c ****     }
- 236:BLE_Central_Observer.c **** 	
- 237:BLE_Central_Observer.c **** 	if (!IsConnected)    
- 696              		.loc 1 237 0
- 697 000e 184B     		ldr	r3, .L41+4
+ 695 000c 2BD0     		beq	.L39
+ 236:BLE_Central_Observer.c ****     {
+ 237:BLE_Central_Observer.c ****         /*If stack is busy wait for ready signal*/
+ 238:BLE_Central_Observer.c ****         return;
+ 239:BLE_Central_Observer.c ****     }
+ 240:BLE_Central_Observer.c **** 	
+ 241:BLE_Central_Observer.c **** 	if (!IsConnected)    
+ 696              		.loc 1 241 0
+ 697 000e 184B     		ldr	r3, .L40+4
  698 0010 1B78     		ldrb	r3, [r3]
  699 0012 002B     		cmp	r3, #0
- 700 0014 28D1     		bne	.L35
- 238:BLE_Central_Observer.c ****     {
- 239:BLE_Central_Observer.c ****       if(CYBLE_STATE_DISCONNECTED == CyBle_GetState())
- 701              		.loc 1 239 0
- 702 0016 174B     		ldr	r3, .L41+8
+ 700 0014 28D1     		bne	.L34
+ 242:BLE_Central_Observer.c ****     {
+ 243:BLE_Central_Observer.c ****       if(CYBLE_STATE_DISCONNECTED == CyBle_GetState())
+ 701              		.loc 1 243 0
+ 702 0016 174B     		ldr	r3, .L40+8
  703 0018 1B78     		ldrb	r3, [r3]
  704 001a 052B     		cmp	r3, #5
- 705 001c 24D1     		bne	.L35
- 240:BLE_Central_Observer.c **** 	   {
- 241:BLE_Central_Observer.c ****          if(IsSelected)
- 706              		.loc 1 241 0
- 707 001e 164B     		ldr	r3, .L41+12
+ 705 001c 24D1     		bne	.L34
+ 244:BLE_Central_Observer.c **** 	   {
+ 245:BLE_Central_Observer.c ****          if(IsSelected)
+ 706              		.loc 1 245 0
+ 707 001e 164B     		ldr	r3, .L40+12
  708 0020 1B78     		ldrb	r3, [r3]
  709 0022 002B     		cmp	r3, #0
- 710 0024 20D0     		beq	.L35
- 242:BLE_Central_Observer.c **** 		  {
- 243:BLE_Central_Observer.c **** 		
- 244:BLE_Central_Observer.c ****             apiResult = CyBle_GapcConnectDevice(&connectPeriphDevice[Periph_Selected]);
- 711              		.loc 1 244 0
- 712 0026 154B     		ldr	r3, .L41+16
+ 710 0024 20D0     		beq	.L34
+ 246:BLE_Central_Observer.c **** 		  {
+ 247:BLE_Central_Observer.c **** 		
+ 248:BLE_Central_Observer.c ****             apiResult = CyBle_GapcConnectDevice(&connectPeriphDevice[Periph_Selected]);
+ 711              		.loc 1 248 0
+ 712 0026 154B     		ldr	r3, .L40+16
  713 0028 1B78     		ldrb	r3, [r3]
  714 002a 1A00     		movs	r2, r3
  715 002c 1300     		movs	r3, r2
  716 002e DB00     		lsls	r3, r3, #3
  717 0030 9B1A     		subs	r3, r3, r2
- 718 0032 134A     		ldr	r2, .L41+20
+ 718 0032 134A     		ldr	r2, .L40+20
  719 0034 9B18     		adds	r3, r3, r2
  720 0036 1800     		movs	r0, r3
  721 0038 FFF7FEFF 		bl	CyBle_GapcConnectDevice
  722 003c 0300     		movs	r3, r0
  723 003e 1A00     		movs	r2, r3
- 724 0040 104B     		ldr	r3, .L41+24
+ 724 0040 104B     		ldr	r3, .L40+24
  725 0042 1A80     		strh	r2, [r3]
- 245:BLE_Central_Observer.c **** 			if(CYBLE_ERROR_OK != apiResult )
- 726              		.loc 1 245 0
- 727 0044 0F4B     		ldr	r3, .L41+24
+ 249:BLE_Central_Observer.c **** 			if(CYBLE_ERROR_OK != apiResult )
+ 726              		.loc 1 249 0
+ 727 0044 0F4B     		ldr	r3, .L40+24
  728 0046 1B88     		ldrh	r3, [r3]
  729 0048 002B     		cmp	r3, #0
- 730 004a 04D0     		beq	.L38
- 246:BLE_Central_Observer.c **** 			{
- 247:BLE_Central_Observer.c **** 			   printf ("Connection Request to peripheral failed \r\n");
- 731              		.loc 1 247 0
- 732 004c 0E4B     		ldr	r3, .L41+28
+ 730 004a 04D0     		beq	.L37
+ 250:BLE_Central_Observer.c **** 			{
+ 251:BLE_Central_Observer.c **** 			   printf ("Connection Request to peripheral failed \r\n");
+ 731              		.loc 1 251 0
+ 732 004c 0E4B     		ldr	r3, .L40+28
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 20
+
+
  733 004e 1800     		movs	r0, r3
  734 0050 FFF7FEFF 		bl	puts
- 735 0054 03E0     		b	.L39
- 736              	.L38:
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 20
-
-
- 248:BLE_Central_Observer.c **** 			}
- 249:BLE_Central_Observer.c ****             else
- 250:BLE_Central_Observer.c ****             {
- 251:BLE_Central_Observer.c ****                printf ("Connection Request Sent to Peripheral \r\n");
- 737              		.loc 1 251 0
- 738 0056 0D4B     		ldr	r3, .L41+32
+ 735 0054 03E0     		b	.L38
+ 736              	.L37:
+ 252:BLE_Central_Observer.c **** 			}
+ 253:BLE_Central_Observer.c ****             else
+ 254:BLE_Central_Observer.c ****             {
+ 255:BLE_Central_Observer.c ****                printf ("Connection Request Sent to Peripheral \r\n");
+ 737              		.loc 1 255 0
+ 738 0056 0D4B     		ldr	r3, .L40+32
  739 0058 1800     		movs	r0, r3
  740 005a FFF7FEFF 		bl	puts
- 741              	.L39:
- 252:BLE_Central_Observer.c ****             }
- 253:BLE_Central_Observer.c ****             IsSelected = 0;
- 742              		.loc 1 253 0
- 743 005e 064B     		ldr	r3, .L41+12
+ 741              	.L38:
+ 256:BLE_Central_Observer.c ****             }
+ 257:BLE_Central_Observer.c ****             IsSelected = 0;
+ 742              		.loc 1 257 0
+ 743 005e 064B     		ldr	r3, .L40+12
  744 0060 0022     		movs	r2, #0
  745 0062 1A70     		strb	r2, [r3]
- 746 0064 00E0     		b	.L35
- 747              	.L40:
- 234:BLE_Central_Observer.c ****     }
- 748              		.loc 1 234 0
+ 746 0064 00E0     		b	.L34
+ 747              	.L39:
+ 238:BLE_Central_Observer.c ****     }
+ 748              		.loc 1 238 0
  749 0066 C046     		nop
- 750              	.L35:
- 254:BLE_Central_Observer.c **** 		  }
- 255:BLE_Central_Observer.c **** 		}
- 256:BLE_Central_Observer.c **** 	}
- 257:BLE_Central_Observer.c **** 	
- 258:BLE_Central_Observer.c **** }
- 751              		.loc 1 258 0
+ 750              	.L34:
+ 258:BLE_Central_Observer.c **** 		  }
+ 259:BLE_Central_Observer.c **** 		}
+ 260:BLE_Central_Observer.c **** 	}
+ 261:BLE_Central_Observer.c **** 	
+ 262:BLE_Central_Observer.c **** }
+ 751              		.loc 1 262 0
  752 0068 BD46     		mov	sp, r7
  753              		@ sp needed
  754 006a 80BD     		pop	{r7, pc}
- 755              	.L42:
+ 755              	.L41:
  756              		.align	2
- 757              	.L41:
+ 757              	.L40:
  758 006c 00000000 		.word	cyBle_busyStatus
  759 0070 00000000 		.word	IsConnected
  760 0074 00000000 		.word	cyBle_state
@@ -1194,13 +1198,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  775              		.file 5 "Generated_Source\\PSoC4/BLE_StackGap.h"
  776              		.file 6 "Generated_Source\\PSoC4/BLE_StackGatt.h"
  777              		.file 7 "Generated_Source\\PSoC4/BLE_eventHandler.h"
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 21
+
+
  778              		.file 8 "main.h"
  779              		.section	.debug_info,"",%progbits
  780              	.Ldebug_info0:
  781 0000 70060000 		.4byte	0x670
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 21
-
-
  782 0004 0400     		.2byte	0x4
  783 0006 00000000 		.4byte	.Ldebug_abbrev0
  784 000a 04       		.byte	0x4
@@ -1254,13 +1258,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  832 0067 340E0000 		.4byte	.LASF8
  833 006b 04       		.uleb128 0x4
  834 006c D0040000 		.4byte	.LASF9
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 22
+
+
  835 0070 02       		.byte	0x2
  836 0071 B901     		.2byte	0x1b9
  837 0073 2C000000 		.4byte	0x2c
  838 0077 04       		.uleb128 0x4
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 22
-
-
  839 0078 6A0C0000 		.4byte	.LASF10
  840 007c 02       		.byte	0x2
  841 007d BA01     		.2byte	0x1ba
@@ -1314,13 +1318,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  889 00de 08       		.uleb128 0x8
  890 00df DA010000 		.4byte	.LASF20
  891 00e3 02       		.byte	0x2
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 23
+
+
  892 00e4 08       		.uleb128 0x8
  893 00e5 360F0000 		.4byte	.LASF21
  894 00e9 03       		.byte	0x3
  895 00ea 08       		.uleb128 0x8
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 23
-
-
  896 00eb A5020000 		.4byte	.LASF22
  897 00ef 04       		.byte	0x4
  898 00f0 08       		.uleb128 0x8
@@ -1374,13 +1378,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  946 0150 08       		.uleb128 0x8
  947 0151 710C0000 		.4byte	.LASF39
  948 0155 2E       		.byte	0x2e
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 24
+
+
  949 0156 08       		.uleb128 0x8
  950 0157 50010000 		.4byte	.LASF40
  951 015b 2F       		.byte	0x2f
  952 015c 08       		.uleb128 0x8
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 24
-
-
  953 015d C00A0000 		.4byte	.LASF41
  954 0161 30       		.byte	0x30
  955 0162 08       		.uleb128 0x8
@@ -1434,13 +1438,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1003 01c2 08       		.uleb128 0x8
  1004 01c3 FA030000 		.4byte	.LASF58
  1005 01c7 49       		.byte	0x49
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 25
+
+
  1006 01c8 08       		.uleb128 0x8
  1007 01c9 D60F0000 		.4byte	.LASF59
  1008 01cd 4A       		.byte	0x4a
  1009 01ce 08       		.uleb128 0x8
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 25
-
-
  1010 01cf 79010000 		.4byte	.LASF60
  1011 01d3 4B       		.byte	0x4b
  1012 01d4 08       		.uleb128 0x8
@@ -1494,13 +1498,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1060 0234 08       		.uleb128 0x8
  1061 0235 B7010000 		.4byte	.LASF77
  1062 0239 73       		.byte	0x73
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 26
+
+
  1063 023a 08       		.uleb128 0x8
  1064 023b 930B0000 		.4byte	.LASF78
  1065 023f 74       		.byte	0x74
  1066 0240 08       		.uleb128 0x8
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 26
-
-
  1067 0241 07050000 		.4byte	.LASF79
  1068 0245 75       		.byte	0x75
  1069 0246 08       		.uleb128 0x8
@@ -1554,13 +1558,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1117 02a7 03       		.byte	0x3
  1118 02a8 08       		.uleb128 0x8
  1119 02a9 82020000 		.4byte	.LASF94
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 27
+
+
  1120 02ad 04       		.byte	0x4
  1121 02ae 08       		.uleb128 0x8
  1122 02af 5C060000 		.4byte	.LASF95
  1123 02b3 05       		.byte	0x5
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 27
-
-
  1124 02b4 08       		.uleb128 0x8
  1125 02b5 FB0C0000 		.4byte	.LASF96
  1126 02b9 06       		.byte	0x6
@@ -1614,13 +1618,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1174 0319 29       		.byte	0x29
  1175 031a 08       		.uleb128 0x8
  1176 031b F5010000 		.4byte	.LASF113
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 28
+
+
  1177 031f 2A       		.byte	0x2a
  1178 0320 08       		.uleb128 0x8
  1179 0321 1D010000 		.4byte	.LASF114
  1180 0325 2B       		.byte	0x2b
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 28
-
-
  1181 0326 08       		.uleb128 0x8
  1182 0327 FA090000 		.4byte	.LASF115
  1183 032b 2C       		.byte	0x2c
@@ -1674,13 +1678,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1231 0391 9C030000 		.4byte	0x39c
  1232 0395 0D       		.uleb128 0xd
  1233 0396 BC000000 		.4byte	0xbc
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 29
+
+
  1234 039a 05       		.byte	0x5
  1235 039b 00       		.byte	0
  1236 039c 04       		.uleb128 0x4
  1237 039d EF020000 		.4byte	.LASF126
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 29
-
-
  1238 03a1 03       		.byte	0x3
  1239 03a2 4505     		.2byte	0x545
  1240 03a4 68030000 		.4byte	0x368
@@ -1734,13 +1738,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1288 0404 0401     		.2byte	0x104
  1289 0406 D3030000 		.4byte	0x3d3
  1290 040a 0A       		.uleb128 0xa
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 30
+
+
  1291 040b 14       		.byte	0x14
  1292 040c 05       		.byte	0x5
  1293 040d 2403     		.2byte	0x324
  1294 040f 62040000 		.4byte	0x462
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 30
-
-
  1295 0413 0B       		.uleb128 0xb
  1296 0414 F1100000 		.4byte	.LASF137
  1297 0418 05       		.byte	0x5
@@ -1794,13 +1798,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1345 047d 9A01     		.2byte	0x19a
  1346 047f 6B000000 		.4byte	0x6b
  1347 0483 00       		.byte	0
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 31
+
+
  1348 0484 0B       		.uleb128 0xb
  1349 0485 8C090000 		.4byte	.LASF145
  1350 0489 06       		.byte	0x6
  1351 048a A001     		.2byte	0x1a0
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 31
-
-
  1352 048c 6B000000 		.4byte	0x6b
  1353 0490 01       		.byte	0x1
  1354 0491 00       		.byte	0
@@ -1854,13 +1858,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1402 04f5 08       		.uleb128 0x8
  1403 04f6 9A0D0000 		.4byte	.LASF156
  1404 04fa 02       		.byte	0x2
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 32
+
+
  1405 04fb 00       		.byte	0
  1406 04fc 10       		.uleb128 0x10
  1407 04fd 53090000 		.4byte	.LASF159
  1408 0501 01       		.byte	0x1
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 32
-
-
  1409 0502 36       		.byte	0x36
  1410 0503 00000000 		.4byte	.LFB38
  1411 0507 30020000 		.4byte	.LFE38-.LFB38
@@ -1914,19 +1918,19 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1459 0562 10       		.uleb128 0x10
  1460 0563 10100000 		.4byte	.LASF160
  1461 0567 01       		.byte	0x1
- 1462 0568 91       		.byte	0x91
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 33
+
+
+ 1462 0568 95       		.byte	0x95
  1463 0569 00000000 		.4byte	.LFB39
  1464 056d 74010000 		.4byte	.LFE39-.LFB39
  1465 0571 01       		.uleb128 0x1
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 33
-
-
  1466 0572 9C       		.byte	0x9c
  1467 0573 A2050000 		.4byte	0x5a2
  1468 0577 11       		.uleb128 0x11
  1469 0578 77070000 		.4byte	.LASF162
  1470 057c 01       		.byte	0x1
- 1471 057d 91       		.byte	0x91
+ 1471 057d 95       		.byte	0x95
  1472 057e 83000000 		.4byte	0x83
  1473 0582 02       		.uleb128 0x2
  1474 0583 91       		.byte	0x91
@@ -1934,7 +1938,7 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1476 0585 11       		.uleb128 0x11
  1477 0586 9E0F0000 		.4byte	.LASF163
  1478 058a 01       		.byte	0x1
- 1479 058b 91       		.byte	0x91
+ 1479 058b 95       		.byte	0x95
  1480 058c C3000000 		.4byte	0xc3
  1481 0590 02       		.uleb128 0x2
  1482 0591 91       		.byte	0x91
@@ -1942,7 +1946,7 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1484 0593 12       		.uleb128 0x12
  1485 0594 C00D0000 		.4byte	.LASF164
  1486 0598 01       		.byte	0x1
- 1487 0599 93       		.byte	0x93
+ 1487 0599 97       		.byte	0x97
  1488 059a 62040000 		.4byte	0x462
  1489 059e 02       		.uleb128 0x2
  1490 059f 91       		.byte	0x91
@@ -1951,7 +1955,7 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1493 05a2 15       		.uleb128 0x15
  1494 05a3 EB0B0000 		.4byte	.LASF180
  1495 05a7 01       		.byte	0x1
- 1496 05a8 E5       		.byte	0xe5
+ 1496 05a8 E9       		.byte	0xe9
  1497 05a9 00000000 		.4byte	.LFB40
  1498 05ad 90000000 		.4byte	.LFE40-.LFB40
  1499 05b1 01       		.uleb128 0x1
@@ -1974,13 +1978,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1516 05d6 05       		.uleb128 0x5
  1517 05d7 03       		.byte	0x3
  1518 05d8 00000000 		.4byte	Periph_Selected
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 34
+
+
  1519 05dc 17       		.uleb128 0x17
  1520 05dd CA000000 		.4byte	.LASF168
  1521 05e1 01       		.byte	0x1
  1522 05e2 13       		.byte	0x13
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 34
-
-
  1523 05e3 6B000000 		.4byte	0x6b
  1524 05e7 05       		.uleb128 0x5
  1525 05e8 03       		.byte	0x3
@@ -2034,13 +2038,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1573 0651 17       		.uleb128 0x17
  1574 0652 66040000 		.4byte	.LASF175
  1575 0656 01       		.byte	0x1
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 35
+
+
  1576 0657 25       		.byte	0x25
  1577 0658 5D000000 		.4byte	0x5d
  1578 065c 05       		.uleb128 0x5
  1579 065d 03       		.byte	0x3
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 35
-
-
  1580 065e 00000000 		.4byte	check
  1581 0662 17       		.uleb128 0x17
  1582 0663 33080000 		.4byte	.LASF176
@@ -2094,13 +2098,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1630 0026 08       		.uleb128 0x8
  1631 0027 00       		.byte	0
  1632 0028 00       		.byte	0
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 36
+
+
  1633 0029 04       		.uleb128 0x4
  1634 002a 16       		.uleb128 0x16
  1635 002b 00       		.byte	0
  1636 002c 03       		.uleb128 0x3
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 36
-
-
  1637 002d 0E       		.uleb128 0xe
  1638 002e 3A       		.uleb128 0x3a
  1639 002f 0B       		.uleb128 0xb
@@ -2154,13 +2158,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1687 005f 03       		.uleb128 0x3
  1688 0060 0E       		.uleb128 0xe
  1689 0061 1C       		.uleb128 0x1c
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 37
+
+
  1690 0062 05       		.uleb128 0x5
  1691 0063 00       		.byte	0
  1692 0064 00       		.byte	0
  1693 0065 0A       		.uleb128 0xa
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 37
-
-
  1694 0066 13       		.uleb128 0x13
  1695 0067 01       		.byte	0x1
  1696 0068 0B       		.uleb128 0xb
@@ -2214,13 +2218,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1744 0098 49       		.uleb128 0x49
  1745 0099 13       		.uleb128 0x13
  1746 009a 00       		.byte	0
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 38
+
+
  1747 009b 00       		.byte	0
  1748 009c 0F       		.uleb128 0xf
  1749 009d 04       		.uleb128 0x4
  1750 009e 01       		.byte	0x1
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 38
-
-
  1751 009f 0B       		.uleb128 0xb
  1752 00a0 0B       		.uleb128 0xb
  1753 00a1 49       		.uleb128 0x49
@@ -2274,13 +2278,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1801 00d2 00       		.byte	0
  1802 00d3 00       		.byte	0
  1803 00d4 12       		.uleb128 0x12
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 39
+
+
  1804 00d5 34       		.uleb128 0x34
  1805 00d6 00       		.byte	0
  1806 00d7 03       		.uleb128 0x3
  1807 00d8 0E       		.uleb128 0xe
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 39
-
-
  1808 00d9 3A       		.uleb128 0x3a
  1809 00da 0B       		.uleb128 0xb
  1810 00db 3B       		.uleb128 0x3b
@@ -2334,13 +2338,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1858 010b 06       		.uleb128 0x6
  1859 010c 40       		.uleb128 0x40
  1860 010d 18       		.uleb128 0x18
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 40
+
+
  1861 010e 9642     		.uleb128 0x2116
  1862 0110 19       		.uleb128 0x19
  1863 0111 00       		.byte	0
  1864 0112 00       		.byte	0
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 40
-
-
  1865 0113 16       		.uleb128 0x16
  1866 0114 34       		.uleb128 0x34
  1867 0115 00       		.byte	0
@@ -2394,13 +2398,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1915 0145 00       		.byte	0
  1916 0146 00       		.byte	0
  1917              		.section	.debug_aranges,"",%progbits
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 41
+
+
  1918 0000 2C000000 		.4byte	0x2c
  1919 0004 0200     		.2byte	0x2
  1920 0006 00000000 		.4byte	.Ldebug_info0
  1921 000a 04       		.byte	0x4
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 41
-
-
  1922 000b 00       		.byte	0
  1923 000c 0000     		.2byte	0
  1924 000e 0000     		.2byte	0
@@ -2454,13 +2458,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1953      4341505F 
  1953      43424643 
  1954              	.LASF146:
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 42
+
+
  1955 0072 4359424C 		.ascii	"CYBLE_CONN_HANDLE_T\000"
  1955      455F434F 
  1955      4E4E5F48 
  1955      414E444C 
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 42
-
-
  1955      455F5400 
  1956              	.LASF172:
  1957 0086 636F6E6E 		.ascii	"connHandle\000"
@@ -2514,13 +2518,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1973      52454144 
  1974              	.LASF65:
  1975 0198 4359424C 		.ascii	"CYBLE_EVT_GATTS_EXEC_WRITE_REQ\000"
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 43
+
+
  1975      455F4556 
  1975      545F4741 
  1975      5454535F 
  1975      45584543 
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 43
-
-
  1976              	.LASF77:
  1977 01b7 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_CONN_IND\000"
  1977      455F4556 
@@ -2574,13 +2578,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  1994      455F4556 
  1994      545F4843 
  1994      495F5354 
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 44
+
+
  1994      41545553 
  1995              	.LASF141:
  1996 02ba 64617461 		.ascii	"data\000"
  1996      00
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 44
-
-
  1997              	.LASF36:
  1998 02bf 4359424C 		.ascii	"CYBLE_EVT_GAPC_SCAN_START_STOP\000"
  1998      455F4556 
@@ -2634,13 +2638,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  2014      68617200 
  2015              	.LASF19:
  2016 0391 4359424C 		.ascii	"CYBLE_EVT_STACK_ON\000"
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 45
+
+
  2016      455F4556 
  2016      545F5354 
  2016      41434B5F 
  2016      4F4E00
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 45
-
-
  2017              	.LASF110:
  2018 03a4 4359424C 		.ascii	"CYBLE_ERROR_DEVICE_ALREADY_EXISTS\000"
  2018      455F4552 
@@ -2694,13 +2698,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  2036      455F5354 
  2036      4154455F 
  2036      44495343 
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 46
+
+
  2036      4F4E4E45 
  2037              	.LASF31:
  2038 0485 4359424C 		.ascii	"CYBLE_EVT_GAPP_ADVERTISEMENT_START_STOP\000"
  2038      455F4556 
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 46
-
-
  2038      545F4741 
  2038      50505F41 
  2038      44564552 
@@ -2754,13 +2758,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  2058      5800
  2059              	.LASF90:
  2060 057e 4359424C 		.ascii	"CYBLE_ERROR_OK\000"
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 47
+
+
  2060      455F4552 
  2060      524F525F 
  2060      4F4B00
  2061              	.LASF49:
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 47
-
-
  2062 058d 4359424C 		.ascii	"CYBLE_EVT_GATTC_ERROR_RSP\000"
  2062      455F4556 
  2062      545F4741 
@@ -2814,13 +2818,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  2080      4F4F425F 
  2080      4E4F545F 
  2081              	.LASF86:
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 48
+
+
  2082 067a 4359424C 		.ascii	"CYBLE_EVT_LE_PING_AUTH_TIMEOUT\000"
  2082      455F4556 
  2082      545F4C45 
  2082      5F50494E 
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 48
-
-
  2082      475F4155 
  2083              	.LASF104:
  2084 0699 4359424C 		.ascii	"CYBLE_ERROR_L2CAP_PSM_ALREADY_REGISTERED\000"
@@ -2874,13 +2878,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  2101              	.LASF118:
  2102 077d 4359424C 		.ascii	"CYBLE_ERROR_NTF_DISABLED\000"
  2102      455F4552 
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 49
+
+
  2102      524F525F 
  2102      4E54465F 
  2102      44495341 
  2103              	.LASF18:
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 49
-
-
  2104 0796 4359424C 		.ascii	"CYBLE_EVT_HOST_INVALID\000"
  2104      455F4556 
  2104      545F484F 
@@ -2934,13 +2938,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  2123              	.LASF165:
  2124 0882 6379426C 		.ascii	"cyBle_state\000"
  2124      655F7374 
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 50
+
+
  2124      61746500 
  2125              	.LASF177:
  2126 088e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
  2126      43313120 
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 50
-
-
  2126      352E342E 
  2126      31203230 
  2126      31363036 
@@ -2994,13 +2998,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  2142      505F534D 
  2142      505F4C4F 
  2143 09e8 4500     		.ascii	"E\000"
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 51
+
+
  2144              	.LASF117:
  2145 09ea 4359424C 		.ascii	"CYBLE_ERROR_MAX\000"
  2145      455F4552 
  2145      524F525F 
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 51
-
-
  2145      4D415800 
  2146              	.LASF115:
  2147 09fa 4359424C 		.ascii	"CYBLE_ERROR_FLASH_WRITE\000"
@@ -3054,13 +3058,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  2163      545F4741 
  2163      505F4441 
  2163      54415F4C 
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 52
+
+
  2164              	.LASF157:
  2165 0ae1 52657049 		.ascii	"RepIndex\000"
  2165      6E646578 
  2165      00
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 52
-
-
  2166              	.LASF29:
  2167 0aea 4359424C 		.ascii	"CYBLE_EVT_GAP_AUTH_COMPLETE\000"
  2167      455F4556 
@@ -3114,13 +3118,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  2184              	.LASF54:
  2185 0bb1 4359424C 		.ascii	"CYBLE_EVT_GATTC_READ_BY_GROUP_TYPE_RSP\000"
  2185      455F4556 
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 53
+
+
  2185      545F4741 
  2185      5454435F 
  2185      52454144 
  2186              	.LASF138:
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 53
-
-
  2187 0bd8 70656572 		.ascii	"peerAddrType\000"
  2187      41646472 
  2187      54797065 
@@ -3174,13 +3178,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  2205      4F00
  2206              	.LASF151:
  2207 0ca7 4359424C 		.ascii	"CYBLE_STATE_CONNECTING\000"
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 54
+
+
  2207      455F5354 
  2207      4154455F 
  2207      434F4E4E 
  2207      45435449 
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 54
-
-
  2208              	.LASF2:
  2209 0cbe 73686F72 		.ascii	"short int\000"
  2209      7420696E 
@@ -3234,13 +3238,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  2225      4F554E54 
  2225      00
  2226              	.LASF150:
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 55
+
+
  2227 0dab 4359424C 		.ascii	"CYBLE_STATE_SCANNING\000"
  2227      455F5354 
  2227      4154455F 
  2227      5343414E 
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 55
-
-
  2227      4E494E47 
  2228              	.LASF164:
  2229 0dc0 61647652 		.ascii	"advReport\000"
@@ -3294,13 +3298,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  2247      435F544F 
  2247      00
  2248              	.LASF83:
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 56
+
+
  2249 0e8b 4359424C 		.ascii	"CYBLE_EVT_L2CAP_CBFC_TX_CREDIT_IND\000"
  2249      455F4556 
  2249      545F4C32 
  2249      4341505F 
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 56
-
-
  2249      43424643 
  2250              	.LASF154:
  2251 0eae 4359424C 		.ascii	"CYBLE_SRVI_GAP\000"
@@ -3354,13 +3358,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  2267      74506172 
  2267      616D00
  2268              	.LASF133:
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 57
+
+
  2269 0fa9 4359424C 		.ascii	"CYBLE_GAPC_SCAN_UNDIRECTED_ADV\000"
  2269      455F4741 
  2269      50435F53 
  2269      43414E5F 
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 57
-
-
  2269      554E4449 
  2270              	.LASF153:
  2271 0fc8 4359424C 		.ascii	"CYBLE_STATE_T\000"
@@ -3414,13 +3418,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  2287      455F4556 
  2287      545F4741 
  2287      5454435F 
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 58
+
+
  2287      46494E44 
  2288              	.LASF99:
  2289 10b8 4359424C 		.ascii	"CYBLE_ERROR_GAP_ROLE\000"
  2289      455F4552 
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 58
-
-
  2289      524F525F 
  2289      4741505F 
  2289      524F4C45 
@@ -3474,13 +3478,13 @@ ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 1
  2308              	.LASF88:
  2309 11b7 4359424C 		.ascii	"CYBLE_EVT_FLASH_CORRUPT\000"
  2309      455F4556 
+ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccWSay3K.s 			page 59
+
+
  2309      545F464C 
  2309      4153485F 
  2309      434F5252 
  2310              	.LASF131:
-ARM GAS  C:\Users\run1009\AppData\Local\Temp\ccDW1wpR.s 			page 59
-
-
  2311 11cf 4359424C 		.ascii	"CYBLE_GAPC_CONN_UNDIRECTED_ADV\000"
  2311      455F4741 
  2311      50435F43 

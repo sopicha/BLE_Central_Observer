@@ -35,7 +35,7 @@ CYBLE_GAP_BD_ADDR_T     connectPeriphDevice[3];
 
 
 int check = 0;
-uint8 bt_addr[6] = {0xb3,0x08,0x7f,0x83,0x55,0xe2};
+uint8 bt_addr[6] = {0x04,0x27,0xa8,0x1b,0x00,0xc4};
 /*******************************************************************************
 * Function Name: Get_Adv_Scan_Packets
 ********************************************************************************
@@ -64,17 +64,20 @@ void Get_Adv_Scan_Packets(CYBLE_GAPC_ADV_REPORT_T* scanReport)
                 (scanReport->eventType == 	CYBLE_GAPC_SCAN_UNDIRECTED_ADV)||
                 (scanReport->eventType == 	CYBLE_GAPC_NON_CONN_UNDIRECTED_ADV))
             {
- 
-        for(uint8 i=0;i<6;i++){
+     
+        for(uint8 i=0u;i<6u;i++){
             scan_addr[i] = scanReport->peerBdAddr[i];
-    
+            
             if(scan_addr[i] == bt_addr[i]){
                 check++;   
             }
         }
+      
        }
+            
         //if scanned ble address matched to target address
         if (check==6)
+        
         {
              IsDetected = 1;
             // Receiving Advertisement Packet
@@ -89,6 +92,7 @@ void Get_Adv_Scan_Packets(CYBLE_GAPC_ADV_REPORT_T* scanReport)
                 
                 printf ("\n\n");  
                 printf ("Found Device No: %d\r\n",devIndex);
+                //printf ("Found Device: \r\n");
         		
         	    printf("RSSI: %d \r\n",scanReport->rssi);
                 printf("peerBdAddr: %x%x%x%x%x%x \r\n",
@@ -117,13 +121,13 @@ void Get_Adv_Scan_Packets(CYBLE_GAPC_ADV_REPORT_T* scanReport)
               }
             }
         }
-        
+        /*
         else
         {
            // printf ("Device Counts Exceeds 10 \r\n");
-          //  devIndex++;
+           // devIndex++;
         }
-        
+        */
     }
 		check = 0;
 }
@@ -158,9 +162,9 @@ void StackEventHandler(uint32 event, void *eventParam)
 			break;
 		
         case CYBLE_EVT_TIMEOUT:
+            printf("TIME OUT\r\n");
          if( CYBLE_GAP_SCAN_TO ==*(uint16*) eventParam)
-            {
-                printf("TIME OUT\r\n");
+            {       
                 // Start Scanning again when timeout occurs
                 CyBle_GapcStartScan(CYBLE_SCANNING_SLOW);
                 GREEN_LED_ON();

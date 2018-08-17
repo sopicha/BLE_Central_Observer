@@ -160,6 +160,7 @@ int main()
                     {
                       // Disconnect if another connection already exists
                         apiResult =    CyBle_GapDisconnect(connHandle.bdHandle); 
+                        printf("Disconnect if another connection already exists\r\n");
                         if(CYBLE_ERROR_OK != apiResult )
     				    {
     				       printf ("Error. Cannot Disconnect a previous Connection \r\n"); 
