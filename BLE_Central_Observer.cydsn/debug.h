@@ -17,7 +17,7 @@
 #include "project.h"	
 	
 extern void print_event(uint32 event);	
-	
+void PrintHex(uint8);	
 	
 #endif	
 

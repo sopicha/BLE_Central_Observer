@@ -181,6 +181,7 @@ void StackEventHandler(uint32 event, void *eventParam)
 			/* When the peripheral device is connected, store the connection handle.*/      
             IsConnected = 1;
             connHandle = *(CYBLE_CONN_HANDLE_T *)eventParam;
+            PrintHex(*(uint8*)eventParam);
 			break;
 		
 		case CYBLE_EVT_GAP_DEVICE_CONNECTED:

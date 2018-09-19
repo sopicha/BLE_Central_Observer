@@ -98,6 +98,53 @@ int _write(int file, char *ptr, int len)
 #endif  /* (__ARMCC_VERSION) */   
 
 
+/*******************************************************************************
+* Function Name: PrintHex
+********************************************************************************
+* Summary:
+*        Converts HEX number to characters in ASCII that can be printed on 
+* terminal.
+*
+* Parameters:
+*  num: HEX to be converted to string.
+*
+* Return:
+*  void
+*
+*******************************************************************************/
+void PrintHex(uint8 num)
+{
+	#if (DEBUG_ENABLED == 1)
+	uint8 temp[2];
+	
+	temp[0] = num%16;
+	num = num/16;
+	temp[1] = num%16;
+
+	UART_UartPutString("0x");
+	if(temp[1] < 10)
+	{
+		UART_UartPutChar('0' + temp[1]);
+	}
+	else
+	{
+		UART_UartPutChar('A' + (temp[1] - 10));
+	}
+
+	if(temp[0] < 10)
+	{
+		UART_UartPutChar('0' + temp[0]);
+	}
+	else
+	{
+		UART_UartPutChar('A' + (temp[0] - 10));
+	}
+	#else
+		num = num;
+	#endif
+}
+
+
 void print_event(uint32 event)
 {
 	switch(event)
